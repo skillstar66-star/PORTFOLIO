@@ -7,6 +7,13 @@ const framePaths = Object.keys(frameModules)
   .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
   .map((key) => frameModules[key] as string);
 
+const getOptimizedPreviewUrl = (url: string) => {
+  if (url && url.includes('cloudinary.com')) {
+    return url.replace('/upload/', '/upload/q_auto,f_auto,w_300,c_scale/');
+  }
+  return url;
+};
+
 interface Project {
   title: string;
   category: string;
@@ -29,6 +36,84 @@ interface Project {
   timeline?: string;
   services?: string;
 }
+
+interface Video {
+  title: string;
+  duration: string;
+  category: string;
+  thumbnail: string;
+  videoUrl?: string;
+}
+
+interface BrandFolder {
+  id: string;
+  name: string;
+  count: number;
+  shortDesc: string;
+  thumbnail: string;
+  videos: Video[];
+}
+
+const videoBrandsData: BrandFolder[] = [
+  {
+    id: 'rokea',
+    name: 'ROKEA',
+    count: 30,
+    shortDesc: 'Luxury Sarees & Jewellery Brand',
+    thumbnail: '/images/projects/rokea_thumbnail.png',
+    videos: [
+      { title: 'Pink Saree Showcase', duration: '00:15', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674815/25.4.26_pink_saree_qlzha9.mp4' },
+      { title: 'Antique Chain Jewellery', duration: '00:20', category: 'Jewellery Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674815/6.5.26_antique_chain_video_gizrto.mp4' },
+      { title: 'Luxury Silk Weaves', duration: '00:15', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674814/9.4.26_video_1_quifw7.mp4' },
+      { title: 'Traditional Bridal Wear', duration: '00:30', category: 'Bridal Shoot', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674812/21.4.26_video2_iqofqu.mp4' },
+      { title: 'Saree Draping Elegance', duration: '00:25', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674810/6.4.26_v1_a87nvc.mp4' },
+      { title: 'Premium Festive Wear', duration: '00:15', category: 'Festive Wear', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674804/V1_rkxy3f.mp4' },
+      { title: 'Heritage Gold Collections', duration: '00:18', category: 'Jewellery Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674799/V-1_dfdulk.mp4' },
+      { title: "Today's Bridal Special", duration: '00:22', category: 'Bridal Shoot', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674804/today_reel_j9ysx2.mp4' },
+      { title: 'Gold Zari Details', duration: '00:15', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674800/17.4.26_video_6_izcj1i.mp4' },
+      { title: 'Minimal Bridal Set', duration: '00:30', category: 'Jewellery Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674798/25.4.26_minimal_bridal_set_video_kqushm.mp4' },
+      { title: 'Pure Kanjivaram Silk', duration: '00:28', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674791/9.4.26_video_2_fmpjmz.mp4' },
+      { title: 'Royal Wedding Collection', duration: '00:20', category: 'Bridal Shoot', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674774/11.4.26_video_1_ciwtqt.mp4' },
+      { title: 'Handcrafted Neckpieces', duration: '00:15', category: 'Jewellery Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674773/21.4.26_video_1_nnrsew.mp4' },
+      { title: 'Designer Saree Trends', duration: '00:18', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674768/22.4.26_video_2_gpsqfr.mp4' },
+      { title: 'Intricate Jewellery Shoot', duration: '00:24', category: 'Jewellery Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674765/0422_bpakcm.mp4' },
+      { title: 'Classic Blue Saree', duration: '00:15', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674761/24.4.26_blue_saree_d3flgi.mp4' },
+      { title: 'Exquisite Border Work', duration: '00:30', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674738/17.4.26_video1_t6vguw.mp4' },
+      { title: 'South Indian Bridal Look', duration: '00:25', category: 'Bridal Shoot', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674724/8.4.26_video_4_vpjmn4.mp4' },
+      { title: 'Ethnic Fashion Reel', duration: '00:15', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674719/8.4.26_reel_v2_k9pmiz.mp4' },
+      { title: 'Authentic Loom Craft', duration: '00:20', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674711/17.4.26_v2_px05yd.mp4' },
+      { title: 'Modern Choker Sets', duration: '00:22', category: 'Jewellery Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781674695/0327_3_ez8ygo.mp4' },
+      { title: 'Exhibition Highlights', duration: '00:45', category: 'Event Promo', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781673865/finnal_expo_video_ko6wsr.mp4' },
+      { title: 'Festive Sparkle Reel', duration: '00:15', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781673306/today_reel_u9fkbb.mp4' },
+      { title: 'Luxury Wedding Series', duration: '00:30', category: 'Bridal Shoot', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781673304/finnal_reel_5_taqq2j.mp4' },
+      { title: 'Temple Jewellery Craft', duration: '00:18', category: 'Jewellery Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781673209/V-1_urj9rn.mp4' },
+      { title: 'Silver Saree Accents', duration: '00:15', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781672633/8.4.26_video_5_jelezz.mp4' },
+      { title: 'Rich Green Silk Saree', duration: '00:20', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781672611/24.4.26_green_saree_h8wpsu.mp4' },
+      { title: 'Gold Polish Sets', duration: '00:25', category: 'Jewellery Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781672586/22.4.26_video_2_fcxqs4.mp4' },
+      { title: 'Royal Blue Collection', duration: '00:15', category: 'Saree Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781672578/24.4.26_blue_saree_q2cwli.mp4' },
+      { title: 'Premium Bridal Chokers', duration: '00:30', category: 'Jewellery Showcase', thumbnail: '/images/projects/rokea_thumbnail.png', videoUrl: 'https://res.cloudinary.com/dgpkzmkxf/video/upload/v1781672540/0327_3_euprx8.mp4' }
+    ]
+  },
+  {
+    id: 'seed-therapy',
+    name: 'Seed Therapy',
+    count: 18,
+    shortDesc: 'Pediatric Therapy & Wellness Center',
+    thumbnail: '/images/projects/seedstherapy_thumbnail.png',
+    videos: [
+      { title: 'Early Intervention Intro', duration: '01:30', category: 'Awareness Video', thumbnail: '/images/projects/seedstherapy_thumbnail.png' },
+      { title: 'Sensory Integration Therapy Walkthrough', duration: '02:45', category: 'Educational', thumbnail: '/images/projects/seedstherapy_thumbnail.png' },
+      { title: 'Parent Testimonial - Kabir\'s Journey', duration: '03:10', category: 'Client Story', thumbnail: '/images/projects/seedstherapy_thumbnail.png' },
+      { title: 'Occupational Therapy Activities at Home', duration: '01:50', category: 'Tutorial', thumbnail: '/images/projects/seedstherapy_thumbnail.png' },
+      { title: 'Understanding Autism Grids', duration: '02:15', category: 'Awareness Video', thumbnail: '/images/projects/seedstherapy_thumbnail.png' },
+      { title: 'Speech Therapy Games for Kids', duration: '01:40', category: 'Tutorial', thumbnail: '/images/projects/seedstherapy_thumbnail.png' },
+      { title: 'Physiotherapy Center Tour', duration: '01:10', category: 'Showcase', thumbnail: '/images/projects/seedstherapy_thumbnail.png' },
+      { title: 'Interactive Learning Playgrounds', duration: '01:25', category: 'Showcase', thumbnail: '/images/projects/seedstherapy_thumbnail.png' },
+      { title: 'Nutrition Tips for Developing Minds', duration: '02:30', category: 'Educational', thumbnail: '/images/projects/seedstherapy_thumbnail.png' },
+      { title: 'Group Social Skills Exercises', duration: '01:55', category: 'Documentary', thumbnail: '/images/projects/seedstherapy_thumbnail.png' }
+    ]
+  }
+];
 
 const projectsData: Project[] = [
   {
@@ -657,6 +742,8 @@ function App() {
   const imgRef = useRef<HTMLImageElement>(null);
   const isFirstMount = useRef<boolean>(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedBrandFolder, setSelectedBrandFolder] = useState<string | null>(null);
+  const [activeVideoUrl, setActiveVideoUrl] = useState<string | null>(null);
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [expandedCardIndices, setExpandedCardIndices] = useState<number[]>([]);
   const [showLeadPopup, setShowLeadPopup] = useState<boolean>(false);
@@ -911,11 +998,7 @@ function App() {
       <header className="navbar desktop-only">
         <div className="container nav-content">
           <div className="logo">
-            <div className="logo-icon"></div>
-            <div className="logo-text">
-              <span className="logo-title">SkillStar</span>
-              <span className="logo-subtitle">Digital Growth</span>
-            </div>
+            <img src="/images/projects/logo (2).png" alt="SkillStar Logo" className="logo-image" />
           </div>
           <nav className="nav-links">
             <a href="#" className="active" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>HOME</a>
@@ -1014,119 +1097,126 @@ function App() {
 
       <main className="main-content container desktop-only">
         <div className="hero-text-section reveal">
-          <p className="kicker text-gradient">AI-POWERED DIGITAL GROWTH COMPANY</p>
-          <h1 className="main-headline">
-            Transforming Businesses<br />
-            Into <span className="text-gradient">Market Leaders</span>
+          <p className="kicker kicker-purple">CREATING</p>
+          <h1 className="main-headline uppercase-headline">
+            DIGITAL<br />
+            <span className="text-gradient-purple">EXPERIENCES</span><br />
+            THAT DRIVE<br />
+            <span className="text-gradient-purple">RESULTS</span>
           </h1>
           <p className="hero-subtext">
-            We don't just market businesses. We engineer digital ecosystems that increase authority, improve visibility, generate qualified leads, and accelerate long-term growth.
+            We build powerful websites, web applications, and digital solutions that help brands grow.
           </p>
-          <div className="hero-actions">
-            <button className="btn-primary" onClick={() => {
-              const servicesSection = document.querySelector('.services-section');
-              if (servicesSection) {
-                servicesSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}>
-              Explore Our Services <span>→</span>
-            </button>
-            <div className="hero-stats">
-              <span className="stat-number">20+</span>
-              <span className="stat-label">Projects Delivered</span>
-            </div>
-          </div>
-
-          <div className="trust-badges">
-            <div className="badge"><span className="badge-icon">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </span> ROI Focused</div>
-            <div className="badge"><span className="badge-icon">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </span> AI-Driven Growth</div>
-            <div className="badge"><span className="badge-icon">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-            </span> Lead Generation</div>
-          </div>
-        </div>
-
-        <div className="hero-visual-section reveal">
-          <div className="brain-container glass-panel">
-            <img src="/brain.png" alt="Glowing Brain" className="brain-image" />
-
-            <div className="feature-card ui-ux glass-panel reveal">
-              <div className="card-icon ui-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          
+          <div className="hero-features-row">
+            <div className="hero-feature-item">
+              <div className="feature-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
               </div>
-              <div>
-                <h3>UI/UX Design</h3>
-                <p>Creative interfaces<br />that engage and<br />delight users.</p>
+              <div className="feature-text">
+                <h4>Modern Design</h4>
+                <p>Pixel perfect layouts</p>
               </div>
             </div>
 
-            <div className="feature-card digital-marketing glass-panel reveal">
-              <div className="card-icon marketing-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <div className="hero-feature-item">
+              <div className="feature-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
               </div>
-              <div>
-                <h3>Digital Marketing</h3>
-                <p>Strategies that drive<br />visibility, engagement,<br />and real growth.</p>
-              </div>
-            </div>
-
-            <div className="feature-card web-dev glass-panel reveal">
-              <div className="card-icon web-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              </div>
-              <div>
-                <h3>Web Development</h3>
-                <p>Scalable websites<br />and web applications<br />built for performance.</p>
+              <div className="feature-text">
+                <h4>High Performance</h4>
+                <p>Optimized for speed</p>
               </div>
             </div>
 
-            <div className="feature-card seo glass-panel reveal">
-              <div className="card-icon seo-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <div className="hero-feature-item">
+              <div className="feature-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
               </div>
-              <div>
-                <h3>SEO & Analytics</h3>
-                <p>Data-driven insights<br />that lead to smarter<br />decisions and growth.</p>
+              <div className="feature-text">
+                <h4>Scalable Solutions</h4>
+                <p>Built for growth & the future</p>
               </div>
             </div>
           </div>
         </div>
+
+
       </main>
 
       {/* Mobile-Only Hero Section */}
       <section className="mobile-hero mobile-only container">
         <div className="mobile-hero-header">
           <div className="logo">
-            <div className="logo-icon"></div>
-            <div className="logo-text">
-              <span className="logo-title">SkillStar</span>
-              <span className="logo-subtitle">Digital Growth</span>
-            </div>
+            <img src="/images/projects/logo (2).png" alt="SkillStar Logo" className="logo-image" />
           </div>
           <button className="btn-outline" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }} onClick={() => setShowLeadPopup(true)}>
             Contact
           </button>
         </div>
 
-        <span className="mobile-hero-badge">AI-POWERED GROWTH ENGINE</span>
+        <span className="mobile-hero-badge">CREATING</span>
         <h1 className="mobile-hero-title">
-          Transforming Businesses Into <span className="text-gradient">Market Leaders</span>
+          DIGITAL <span className="text-gradient-purple">EXPERIENCES</span> THAT DRIVE <span className="text-gradient-purple">RESULTS</span>
         </h1>
         <p className="mobile-hero-subtitle">
-          We engineer high-performance digital ecosystems that increase authority, generate qualified leads, and accelerate long-term growth.
+          We build powerful websites, web applications, and digital solutions that help brands grow.
         </p>
 
         <div className="mobile-hero-actions">
           <button className="mobile-btn mobile-btn-primary" onClick={() => setShowLeadPopup(true)}>
             Claim Free Growth Audit <span>→</span>
           </button>
-          <button className="mobile-btn mobile-btn-secondary" onClick={() => scrollToSection('.mobile-services')}>
-            Explore Services
-          </button>
+        </div>
+
+        <div className="mobile-hero-features">
+          <div className="mobile-feature-item">
+            <div className="feature-icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+              </svg>
+            </div>
+            <div className="feature-text">
+              <h4>Modern Design</h4>
+              <p>Pixel perfect layouts</p>
+            </div>
+          </div>
+          <div className="mobile-feature-item">
+            <div className="feature-icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <div className="feature-text">
+              <h4>High Performance</h4>
+              <p>Optimized for speed</p>
+            </div>
+          </div>
+          <div className="mobile-feature-item">
+            <div className="feature-icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <div className="feature-text">
+              <h4>Scalable Solutions</h4>
+              <p>Built for growth & the future</p>
+            </div>
+          </div>
         </div>
 
         {/* Swipe Statistics Cards */}
@@ -1238,6 +1328,7 @@ function App() {
                   onClick={() => {
                     setSelectedCategory(cat === 'All Projects' ? 'All' : cat);
                     setActiveShowcaseIdx(0);
+                    setSelectedBrandFolder(null);
                   }}
                 >
                   {cat === 'All Projects' && (
@@ -1289,8 +1380,115 @@ function App() {
             </div>
           </div>
 
-          {/* Main Featured Showcase Card */}
-          <div 
+          {/* Main Content Area: Conditional based on Video Category */}
+          {selectedCategory === 'Videos' || selectedCategory === 'Vedios' ? (
+            <div className="videos-main-view">
+              {selectedBrandFolder === null ? (
+                /* Grid of Brand Folders */
+                <div className="videos-folder-grid">
+                  {videoBrandsData.map((brand) => (
+                    <div 
+                      key={brand.id} 
+                      className="video-folder-card glass-panel" 
+                      onClick={() => setSelectedBrandFolder(brand.id)}
+                    >
+                      <div className="folder-thumbnail-wrapper">
+                        <img src={brand.thumbnail} alt={brand.name} loading="lazy" />
+                        <div className="folder-icon-badge">📁</div>
+                      </div>
+                      <div className="folder-content">
+                        <div className="folder-header-row">
+                          <h4>{brand.name}</h4>
+                          <span className="videos-count">{brand.count} Videos</span>
+                        </div>
+                        <p className="folder-desc">{brand.shortDesc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                /* Video Gallery for Selected Brand */
+                (() => {
+                  const activeBrand = videoBrandsData.find(b => b.id === selectedBrandFolder);
+                  if (!activeBrand) return null;
+                  return (
+                    <div className="videos-gallery-container">
+                      <div className="gallery-header-row">
+                        <button className="back-to-brands-btn" onClick={() => setSelectedBrandFolder(null)}>
+                          ← Back to Brands
+                        </button>
+                        <h3 className="gallery-title">{activeBrand.name} Videos</h3>
+                      </div>
+                      <div className={`videos-cards-grid ${activeBrand.id === 'rokea' ? 'portrait-reels-grid' : ''}`}>
+                        {activeBrand.videos.map((video, idx) => (
+                          video.videoUrl ? (
+                            <div 
+                              key={idx} 
+                              className={`video-card glass-panel ${activeBrand.id === 'rokea' ? 'portrait-reel' : ''}`}
+                              onMouseEnter={(e) => {
+                                const videoEl = e.currentTarget.querySelector('video');
+                                if (videoEl) {
+                                  videoEl.play().catch(() => {});
+                                }
+                              }}
+                              onMouseLeave={(e) => {
+                                const videoEl = e.currentTarget.querySelector('video');
+                                if (videoEl) {
+                                  videoEl.pause();
+                                }
+                              }}
+                              onClick={() => {
+                                if (video.videoUrl) {
+                                  setActiveVideoUrl(video.videoUrl);
+                                }
+                              }}
+                              style={{ cursor: 'pointer' }}
+                            >
+                              <div className="video-thumbnail-wrapper">
+                                <video 
+                                  src={getOptimizedPreviewUrl(video.videoUrl) + '#t=0.1'} 
+                                  preload="auto" 
+                                  muted 
+                                  loop 
+                                  playsInline 
+                                  className="video-preview-player"
+                                />
+                                <div className="play-button-overlay">
+                                  <div className="play-icon">▶</div>
+                                </div>
+                                <span className="video-duration">{video.duration}</span>
+                              </div>
+                              <div className="video-card-body">
+                                <span className="video-category-tag">{video.category}</span>
+                               <h4 className="video-card-title">{video.title}</h4>
+                              </div>
+                            </div>
+                          ) : (
+                            <div key={idx} className="video-card glass-panel">
+                              <div className="video-thumbnail-wrapper">
+                                <img src={video.thumbnail} alt={video.title} loading="lazy" />
+                                <div className="play-button-overlay">
+                                  <div className="play-icon">▶</div>
+                                </div>
+                                <span className="video-duration">{video.duration}</span>
+                              </div>
+                              <div className="video-card-body">
+                                <span className="video-category-tag">{video.category}</span>
+                                <h4 className="video-card-title">{video.title}</h4>
+                              </div>
+                            </div>
+                          )
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })()
+              )}
+            </div>
+          ) : (
+            <>
+              {/* Main Featured Showcase Card */}
+              <div 
             className="featured-project-card glass-panel"
             style={{ 
               '--spotlight-theme': activeShowcaseProject.color,
@@ -1299,9 +1497,33 @@ function App() {
           >
             {/* Left Column: Details & Tech & Navigation */}
             <div className="featured-card-left">
-              <div className="featured-badge-wrapper">
-                <div className="featured-badge-pill">
-                  <span className="star-symbol">★</span> FEATURED PROJECT
+              <div className="featured-card-header-row">
+                <div className="featured-badge-wrapper">
+                  <div className="featured-badge-pill">
+                    <span className="star-symbol">★</span> FEATURED PROJECT
+                  </div>
+                </div>
+
+                <div className="pagination-wrapper">
+                  <span className="pagination-numbers">
+                    {String(activeShowcaseIdx + 1).padStart(2, '0')} <span className="slash">/</span> {String(filteredProjects.length).padStart(2, '0')}
+                  </span>
+                  <div className="pagination-arrows">
+                    <button 
+                      className="arrow-btn prev"
+                      aria-label="Previous showcase"
+                      onClick={() => setActiveShowcaseIdx(prev => (prev === 0 ? filteredProjects.length - 1 : prev - 1))}
+                    >
+                      ‹
+                    </button>
+                    <button 
+                      className="arrow-btn next"
+                      aria-label="Next showcase"
+                      onClick={() => setActiveShowcaseIdx(prev => (prev === filteredProjects.length - 1 ? 0 : prev + 1))}
+                    >
+                      ›
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -1380,7 +1602,7 @@ function App() {
                 </button>
               </div>
 
-              {/* Tech Stack Row & Pagination */}
+              {/* Tech Stack Row */}
               <div className="featured-card-footer">
                 <div className="tech-stack-wrapper">
                   <span className="tech-stack-label">Tech Stack:</span>
@@ -1388,28 +1610,6 @@ function App() {
                     {activeShowcaseProject.tags.map((tag, tIdx) => (
                       <span key={tIdx} className="tech-stack-tag">{tag}</span>
                     ))}
-                  </div>
-                </div>
-
-                <div className="pagination-wrapper">
-                  <span className="pagination-numbers">
-                    {String(activeShowcaseIdx + 1).padStart(2, '0')} <span className="slash">/</span> {String(filteredProjects.length).padStart(2, '0')}
-                  </span>
-                  <div className="pagination-arrows">
-                    <button 
-                      className="arrow-btn prev"
-                      aria-label="Previous showcase"
-                      onClick={() => setActiveShowcaseIdx(prev => (prev === 0 ? filteredProjects.length - 1 : prev - 1))}
-                    >
-                      ‹
-                    </button>
-                    <button 
-                      className="arrow-btn next"
-                      aria-label="Next showcase"
-                      onClick={() => setActiveShowcaseIdx(prev => (prev === filteredProjects.length - 1 ? 0 : prev + 1))}
-                    >
-                      ›
-                    </button>
                   </div>
                 </div>
               </div>
@@ -1548,6 +1748,8 @@ function App() {
               })}
             </div>
           </div>
+            </>
+          )}
         </section>
 
         {/* Project details modal */}
@@ -1620,6 +1822,34 @@ function App() {
             </div>
           )}
         </div>
+
+        {/* Video Lightbox Modal */}
+        {activeVideoUrl && (
+          <div 
+            className="video-lightbox-overlay"
+            onClick={() => setActiveVideoUrl(null)}
+          >
+            <div 
+              className="video-lightbox-container"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button 
+                className="video-lightbox-close-btn"
+                onClick={() => setActiveVideoUrl(null)}
+                aria-label="Close video player"
+              >
+                ×
+              </button>
+              <video 
+                src={activeVideoUrl} 
+                controls 
+                autoPlay 
+                playsInline
+                className="video-lightbox-player"
+              />
+            </div>
+          </div>
+        )}
 
       <div className="desktop-only">
         <section className="about-section container" ref={scrollRef}>
@@ -2037,29 +2267,82 @@ function App() {
         <div className="team-grid">
           {[
             {
-              name: 'Arun Raj',
-              role: 'Lead Developer',
-              bio: 'Building scalable, high-performance web applications.',
-              img: '/images/team/arun_raj.png',
+              name: 'Rahannath P R',
+              role: 'Co-Founder & Director',
+              bio: 'Leading strategic partnerships and client scale-up trajectories.',
+              img: '/images/team/image.png',
               accent: 'purple',
-              icon: (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              ),
+              isFounder: true,
+              experience: '8 Years',
               socials: [
-                { type: 'linkedin', url: '#' },
-                { type: 'github', url: '#' },
-                { type: 'twitter', url: '#' }
+                { type: 'instagram', url: '#' },
+                { type: 'twitter', url: '#' },
+                { type: 'linkedin', url: '#' }
               ]
             },
             {
-              name: 'Priya Sharma',
+              name: 'Rohan R',
+              role: 'Co-Founder & Director',
+              bio: 'Directing creative output and unified brand solutions.',
+              img: '/images/team/image.png',
+              accent: 'purple',
+              isFounder: true,
+              experience: '8 Years',
+              socials: [
+                { type: 'instagram', url: '#' },
+                { type: 'twitter', url: '#' },
+                { type: 'linkedin', url: '#' }
+              ]
+            },
+            {
+              name: 'Sheeba',
+              role: 'Administration Head',
+              bio: 'Supervising operations, workflows and corporate timelines.',
+              img: '/images/team/sheeba.png',
+              accent: 'purple',
+              experience: '5 Years',
+              icon: (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              ),
+              socials: [
+                { type: 'instagram', url: '#' },
+                { type: 'twitter', url: '#' },
+                { type: 'email', url: 'mailto:sheeba@skillstar.com' }
+              ]
+            },
+            {
+              name: 'Saravanan',
+              role: 'Senior Video Editor',
+              bio: 'Designing high-converting marketing collaterals and visual assets.',
+              img: '/images/team/saro.png',
+              accent: 'purple',
+              experience: '6 Years',
+              icon: (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 9 20 8 18 8C16 8 16 6 16 5C16 3 14 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+                  <circle cx="7.5" cy="10.5" r="1.5"></circle>
+                  <circle cx="11.5" cy="7.5" r="1.5"></circle>
+                  <circle cx="16.5" cy="11.5" r="1.5"></circle>
+                </svg>
+              ),
+              socials: [
+                { type: 'instagram', url: '#' },
+                { type: 'behance', url: '#' },
+                { type: 'email', url: 'mailto:saravanan@skillstar.com' }
+              ]
+            },
+            {
+              name: 'Dhanusha',
               role: 'UI/UX Designer',
-              bio: 'Designing intuitive interfaces that users love.',
-              img: '/images/team/priya_sharma.png',
-              accent: 'teal',
+              bio: 'Engineering wireframe aesthetics and seamless user journeys.',
+              img: '/images/team/dhanusha.png',
+              accent: 'purple',
+              experience: '4 Years',
               icon: (
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 20h9"></path>
@@ -2067,136 +2350,152 @@ function App() {
                 </svg>
               ),
               socials: [
-                { type: 'website', url: '#' },
-                { type: 'linkedin', url: '#' },
-                { type: 'instagram', url: '#' }
-              ]
-            },
-            {
-              name: 'Rohith Kumar',
-              role: 'Founder & Creative Director',
-              bio: 'Transforming ideas into impactful digital experiences since 2018.',
-              img: '/images/team/rohith_kumar.png',
-              accent: 'magenta',
-              isFounder: true,
-              socials: [
-                { type: 'linkedin', url: '#' },
-                { type: 'twitter', url: '#' },
-                { type: 'instagram', url: '#' }
-              ]
-            },
-            {
-              name: 'Karthik S',
-              role: 'Digital Marketer',
-              bio: 'Driving growth with data-driven marketing strategies.',
-              img: '/images/team/karthik_s.png',
-              accent: 'green',
-              icon: (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                </svg>
-              ),
-              socials: [
-                { type: 'linkedin', url: '#' },
-                { type: 'twitter', url: '#' },
-                { type: 'instagram', url: '#' }
-              ]
-            },
-            {
-              name: 'Vignesh V',
-              role: 'Video Editor',
-              bio: 'Crafting engaging visuals that tell brand stories.',
-              img: '/images/team/vignesh_v.png',
-              accent: 'orange',
-              icon: (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M23 7l-7 5 7 5V7z"></path>
-                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                </svg>
-              ),
-              socials: [
-                { type: 'youtube', url: '#' },
                 { type: 'instagram', url: '#' },
-                { type: 'behance', url: '#' }
+                { type: 'behance', url: '#' },
+                { type: 'email', url: 'mailto:dhanusha@skillstar.com' }
+              ]
+            },
+            {
+              name: 'Harini',
+              role: 'SEO & App Developer',
+              bio: 'Optimizing technical health models and building hybrid mobile interfaces.',
+              img: '/images/team/harini.png',
+              accent: 'purple',
+              experience: '3 Years',
+              icon: (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="4" y1="9" x2="20" y2="9"></line>
+                  <line x1="4" y1="15" x2="20" y2="15"></line>
+                  <line x1="10" y1="3" x2="8" y2="21"></line>
+                  <line x1="16" y1="3" x2="14" y2="21"></line>
+                </svg>
+              ),
+              socials: [
+                { type: 'instagram', url: '#' },
+                { type: 'github', url: '#' },
+                { type: 'email', url: 'mailto:harini@skillstar.com' }
+              ]
+            },
+            {
+              name: 'Dinesh',
+              role: 'Full Stack Developer',
+              bio: 'Writing clean backend API integrations and responsive frontends.',
+              img: '/images/team/dinesh.jpeg',
+              accent: 'purple',
+              experience: '4 Years',
+              icon: (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              ),
+              socials: [
+                { type: 'instagram', url: '#' },
+                { type: 'github', url: '#' },
+                { type: 'email', url: 'mailto:dinesh@skillstar.com' }
+              ]
+            },
+            {
+              name: 'Ram',
+              role: 'Full Stack Developer',
+              bio: 'Developing data layer queries and serverless database workflows.',
+              img: '/images/team/Ram.png',
+              accent: 'purple',
+              experience: '5 Years',
+              icon: (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                </svg>
+              ),
+              socials: [
+                { type: 'instagram', url: '#' },
+                { type: 'github', url: '#' },
+                { type: 'email', url: 'mailto:ram@skillstar.com' }
               ]
             }
           ].map((member, idx) => (
             <div className={`team-card ${member.accent}-accent ${member.isFounder ? 'founder-card' : ''}`} key={idx}>
-              <div className="card-top-action">
-                {member.isFounder ? (
-                  <span className="founder-badge">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" style={{ marginRight: '4px' }}>
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                    </svg>
-                    FOUNDER
-                  </span>
-                ) : (
-                  <span className="card-badge-icon">
-                    {member.icon}
-                  </span>
-                )}
-              </div>
-              
-              <div className="team-avatar-container">
-                <div className="team-avatar-glow"></div>
-                <img src={member.img} alt={member.name} className="team-avatar" />
+              <div className="team-image-container">
+                <div className="card-top-action">
+                  {member.isFounder ? (
+                    <span className="founder-badge">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" style={{ marginRight: '4px' }}>
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      FOUNDER
+                    </span>
+                  ) : (
+                    <span className="card-badge-icon">
+                      {member.icon}
+                    </span>
+                  )}
+                </div>
+                
+                <img src={member.img} alt={member.name} className="team-image" />
+                
+                <div className="team-social-overlay">
+                  {member.socials.map((social, sIdx) => (
+                    <a href={social.url} className={`social-btn-overlay ${social.type}`} key={sIdx} aria-label={social.type}>
+                      {social.type === 'linkedin' && (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                          <rect x="2" y="9" width="4" height="12"></rect>
+                          <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                      )}
+                      {social.type === 'github' && (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      )}
+                      {social.type === 'twitter' && (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                      )}
+                      {social.type === 'instagram' && (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                      )}
+                      {social.type === 'email' && (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                          <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                      )}
+                      {social.type === 'website' && (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <line x1="2" y1="12" x2="22" y2="12"></line>
+                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                      )}
+                      {social.type === 'behance' && (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M9 10h1.5a1.5 1.5 0 0 0 0-3H9v3zm0 5h2a1.5 1.5 0 0 0 0-3H9v3z"></path>
+                          <path d="M5 20h7a5 5 0 0 0 5-5v-1a5 5 0 0 0-5-5H5v11zM18 9h4"></path>
+                        </svg>
+                      )}
+                    </a>
+                  ))}
+                </div>
               </div>
 
-              <div className="team-info">
+              <div className="team-details-container">
                 <h3>{member.name}</h3>
-                <p className="team-role">{member.role}</p>
-                <p className="team-bio">{member.bio}</p>
-              </div>
-
-              <div className="team-social-links">
-                {member.socials.map((social, sIdx) => (
-                  <a href={social.url} className={`social-btn ${social.type}`} key={sIdx} aria-label={social.type}>
-                    {social.type === 'linkedin' && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                      </svg>
-                    )}
-                    {social.type === 'github' && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                      </svg>
-                    )}
-                    {social.type === 'twitter' && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                      </svg>
-                    )}
-                    {social.type === 'instagram' && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                      </svg>
-                    )}
-                    {social.type === 'website' && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                      </svg>
-                    )}
-                    {social.type === 'youtube' && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                      </svg>
-                    )}
-                    {social.type === 'behance' && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M9 10h1.5a1.5 1.5 0 0 0 0-3H9v3zm0 5h2a1.5 1.5 0 0 0 0-3H9v3z"></path>
-                        <path d="M5 20h7a5 5 0 0 0 5-5v-1a5 5 0 0 0-5-5H5v11zM18 9h4"></path>
-                      </svg>
-                    )}
-                  </a>
-                ))}
+                <p className="team-specialty">{member.role}</p>
+                <div className="team-experience-row">
+                  <span className="experience-label">Experience:</span>
+                  <span className="experience-value"> {member.experience}</span>
+                </div>
+                <button className="team-book-btn">
+                  BOOK {member.name.split(' ')[0].toUpperCase()}
+                </button>
               </div>
             </div>
           ))}
@@ -2326,11 +2625,7 @@ function App() {
             <div className="footer-links-grid">
               <div className="footer-col brand-col">
                 <div className="logo">
-                  <div className="logo-icon"></div>
-                  <div className="logo-text">
-                    <span className="logo-title">SkillStar</span>
-                    <span className="logo-subtitle">Digital Solutions</span>
-                  </div>
+                  <img src="/images/projects/logo (2).png" alt="SkillStar Logo" className="logo-image" />
                 </div>
                 <p>Transforming Businesses Into Market Leaders with AI-powered digital growth ecosystems.</p>
               </div>
@@ -2526,11 +2821,7 @@ function App() {
         <div className="container">
           <div className="mobile-footer-logo-area">
             <div className="logo">
-              <div className="logo-icon"></div>
-              <div className="logo-text">
-                <span className="logo-title">SkillStar</span>
-                <span className="logo-subtitle">Digital Solutions</span>
-              </div>
+              <img src="/images/projects/logo (2).png" alt="SkillStar Logo" className="logo-image" />
             </div>
             <p>Transforming Businesses Into Market Leaders with AI-powered digital growth ecosystems.</p>
           </div>

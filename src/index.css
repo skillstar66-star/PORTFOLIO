@@ -5,11 +5,11 @@
   --bg-gradient: radial-gradient(circle at 50% 50%, #150a38 0%, #030014 60%);
   --text-primary: #ffffff;
   --text-secondary: #9ca3af;
-  --text-gradient: linear-gradient(90deg, #4da4ff, #ff66c4, #ff8c42);
-  --accent-blue: #4da4ff;
+  --text-gradient: linear-gradient(90deg, #9362F7, #ff66c4, #ff8c42);
+  --accent-blue: #8b5cf6;
   --accent-purple: #9b51e0;
   --accent-pink: #ff66c4;
-  --accent-cyan: #00f2fe;
+  --accent-cyan: #9362F7;
   
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.1);
