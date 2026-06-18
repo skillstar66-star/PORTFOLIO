@@ -2,6 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import './App.css'
 import './MobileApp.css'
 
+import seoImg from './assets/services/seo.png';
+import marketingImg from './assets/services/marketing.png';
+import webdevImg from './assets/services/webdev.png';
+import uiuxImg from './assets/services/uiux.png';
+import brandingImg from './assets/services/branding.png';
+import aiImg from './assets/services/ai.png';
+import softwareImg from './assets/services/software.png';
+
 const frameModules = import.meta.glob('./assets/skill star/*.jpg', { eager: true, import: 'default' });
 const framePaths = Object.keys(frameModules)
   .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
@@ -340,49 +348,49 @@ const servicesData: Service[] = [
     title: 'SEO, GEO & AEO Optimization',
     description: 'Technical SEO, Local SEO, Answer Engine Optimization, AI Search Optimization, Google Business Optimization, Schema Implementation.',
     tags: ['Google Search Console', 'Semrush', 'Ahrefs', 'Schema.org', 'Screaming Frog'],
-    img: 'https://images.unsplash.com/photo-1571721795195-a2ca2d33e085?w=600&q=80'
+    img: seoImg
   },
   {
     num: '02',
     title: 'Performance Marketing & Lead Gen',
     description: 'Google Ads, Meta Ads, LinkedIn Advertising, YouTube Campaigns, Conversion Funnel Optimization, Retargeting.',
     tags: ['Google Ads', 'Meta Ads', 'LinkedIn Campaign Mgr', 'HubSpot', 'Google Tag Manager'],
-    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80'
+    img: marketingImg
   },
   {
     num: '03',
     title: 'Enterprise Website Development',
     description: 'Business Websites, E-Commerce, Landing Pages, SaaS Platforms, Web Applications, Progressive Web Apps.',
     tags: ['React', 'Next.js', 'Node.js', 'WordPress', 'Laravel', 'Tailwind CSS'],
-    img: 'https://images.unsplash.com/photo-1547082299-de196ea013d6?w=600&q=80'
+    img: webdevImg
   },
   {
     num: '04',
     title: 'UI/UX Experience Design',
     description: 'Dashboard Design, Mobile App UI, Website Interfaces, SaaS Product Design, UX Research.',
     tags: ['Figma', 'Adobe XD', 'Sketch', 'Framer', 'Miro'],
-    img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80'
+    img: uiuxImg
   },
   {
     num: '05',
     title: 'Branding & Creative Solutions',
     description: 'Logo Design, Brand Identity, Motion Graphics, Social Media Creatives, Packaging Design, Corporate Presentations.',
     tags: ['Adobe Illustrator', 'Adobe Photoshop', 'After Effects', 'Premiere Pro'],
-    img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80'
+    img: brandingImg
   },
   {
     num: '06',
     title: 'AI & Intelligent Automation',
     description: 'AI Chatbots, Virtual Assistants, Workflow Automation, CRM Integrations, Predictive Analytics, Custom AI Tools.',
     tags: ['OpenAI API', 'Claude API', 'Make.com', 'Zapier', 'LangChain', 'n8n'],
-    img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&q=80'
+    img: aiImg
   },
   {
     num: '07',
     title: 'Custom Software Development',
     description: 'ERP Systems, CRM Platforms, SaaS Products, Mobile Applications, API Integrations, Workflow Systems.',
     tags: ['Docker', 'AWS', 'PostgreSQL', 'MongoDB', 'GraphQL', 'REST APIs'],
-    img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80'
+    img: softwareImg
   }
 ];
 
@@ -2270,7 +2278,7 @@ function App() {
               name: 'Rahannath P R',
               role: 'Co-Founder & Director',
               bio: 'Leading strategic partnerships and client scale-up trajectories.',
-              img: '/images/team/image.png',
+              img: '/images/team/Rahannath P R.png',
               accent: 'purple',
               isFounder: true,
               experience: '8 Years',
@@ -2295,7 +2303,7 @@ function App() {
               ]
             },
             {
-              name: 'Sheeba',
+              name: 'Anto Sheeba',
               role: 'Administration Head',
               bio: 'Supervising operations, workflows and corporate timelines.',
               img: '/images/team/sheeba.png',

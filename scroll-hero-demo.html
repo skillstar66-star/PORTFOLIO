@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Skill Star Digital Agency — Digital experiences that drive results." />
+  <title>Skill Star — Digital Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #07050e; color: #fff; overflow-x: hidden; line-height: 1.6; }
+    #animated-logo { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: clamp(3rem, 10vw, 8.5rem); font-weight: 900; letter-spacing: -0.035em; white-space: nowrap; line-height: 1; z-index: 1000; cursor: pointer; user-select: none; background: linear-gradient(130deg, #ffffff 0%, #c084fc 45%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; will-change: transform, font-size; }
+    #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 999; height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; background: transparent; border-bottom: 1px solid transparent; transition: background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease; }
+    #navbar.nav-scrolled { background: rgba(7, 5, 14, 0.88); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border-bottom-color: rgba(255, 255, 255, 0.06); }
+    #nav-logo-slot { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.035em; white-space: nowrap; line-height: 1; background: linear-gradient(130deg, #ffffff 0%, #c084fc 45%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; visibility: hidden; }
+    #nav-links { display: flex; align-items: center; gap: 2.25rem; opacity: 0; }
+    #nav-links a { font-size: 0.875rem; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; letter-spacing: 0.01em; transition: color 0.2s; }
+    #nav-links a:hover { color: #fff; }
+    .nav-cta { background: linear-gradient(135deg, #9333ea, #7c3aed) !important; color: #fff !important; padding: 0.45rem 1.25rem !important; border-radius: 100px; font-weight: 600 !important; font-size: 0.85rem !important; transition: transform 0.2s, box-shadow 0.2s !important; white-space: nowrap; }
+    .nav-cta:hover { transform: translateY(-1px) !important; box-shadow: 0 8px 24px rgba(147, 51, 234, 0.45) !important; }
+    #hero { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; position: relative; overflow: hidden; padding-bottom: 4rem; }
+    #hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(147, 51, 234, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(147, 51, 234, 0.045) 1px, transparent 1px); background-size: 50px 50px; mask-image: radial-gradient(ellipse 75% 70% at 50% 50%, black 30%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 50%, black 30%, transparent 100%); }
+    .hero-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(700px, 90vw); height: min(700px, 90vw); border-radius: 50%; background: radial-gradient(circle, rgba(147, 51, 234, 0.14) 0%, transparent 68%); pointer-events: none; animation: pulse-glow 5s ease-in-out infinite alternate; }
+    @keyframes pulse-glow { 0% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); } }
+    #hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 1.75rem; width: 100%; }
+    #hero-tagline { text-align: center; max-width: 580px; padding: 0 1.5rem; font-size: clamp(0.95rem, 2.2vw, 1.15rem); color: rgba(255,255,255,0.5); font-weight: 400; line-height: 1.8; }
+    #hero-tagline em { font-style: normal; color: #c084fc; font-weight: 500; }
+    #hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: center; }
+    .btn-hero-primary { background: linear-gradient(135deg, #9333ea, #7c3aed); color: #fff; padding: 0.85rem 2rem; border-radius: 100px; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: transform 0.22s, box-shadow 0.22s; white-space: nowrap; }
+    .btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(147, 51, 234, 0.5); }
+    .btn-hero-ghost { color: rgba(255,255,255,0.65); padding: 0.85rem 2rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; text-decoration: none; display: inline-block; background: transparent; transition: all 0.22s; white-space: nowrap; }
+    .btn-hero-ghost:hover { border-color: rgba(192, 132, 252, 0.4); color: #c084fc; background: rgba(192, 132, 252, 0.06); }
+    #scroll-indicator { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    #scroll-indicator span { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    .scroll-line { width: 1px; height: 36px; background: linear-gradient(to bottom, rgba(192, 132, 252, 0.7), transparent); animation: scroll-bounce 2.2s ease-in-out infinite; }
+    @keyframes scroll-bounce { 0%, 100% { transform: translateY(0); opacity: 0.6; } 50% { transform: translateY(6px); opacity: 1; } }
+    .stats-bar { padding: 4.5rem 2rem; background: linear-gradient(135deg, rgba(147, 51, 234, 0.05), rgba(129, 140, 248, 0.05)); border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto; text-align: center; }
+    .stat-num { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; letter-spacing: -0.04em; background: linear-gradient(135deg, #c084fc, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 0.5rem; }
+    .stat-lbl { font-size: 0.825rem; color: rgba(255,255,255,0.45); font-weight: 500; }
+    .section-wrap { max-width: 1160px; margin: 0 auto; padding: 6.5rem 2rem; }
+    .section-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(147, 51, 234, 0.08); border: 1px solid rgba(192, 132, 252, 0.2); color: #c084fc; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.38rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; }
+    .section-hl { font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 1.15rem; }
+    .section-sub { font-size: 1.0313rem; color: rgba(255,255,255,0.5); line-height: 1.78; max-width: 520px; }
+    .text-grad { background: linear-gradient(130deg, #c084fc, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.1rem; margin-top: 3.5rem; }
+    .svc-card { background: rgba(255,255,255,0.022); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 2rem 1.75rem; position: relative; overflow: hidden; transition: transform 0.28s, border-color 0.28s, box-shadow 0.28s; }
+    .svc-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at top left, var(--glow, rgba(147,51,234,0.1)), transparent 55%); opacity: 0; transition: opacity 0.3s; }
+    .svc-card:hover { transform: translateY(-5px); border-color: rgba(192, 132, 252, 0.22); box-shadow: 0 22px 44px rgba(0,0,0,0.35); }
+    .svc-card:hover::after { opacity: 1; }
+    .svc-icon { width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.3rem; position: relative; z-index: 1; }
+    .svc-card h3 { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.6rem; position: relative; z-index: 1; }
+    .svc-card p { font-size: 0.875rem; color: rgba(255,255,255,0.48); line-height: 1.72; position: relative; z-index: 1; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin-top: 3.5rem; }
+    .proj-card { background: rgba(255,255,255,0.022); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; overflow: hidden; cursor: pointer; transition: transform 0.28s, border-color 0.28s, box-shadow 0.28s; }
+    .proj-card:hover { transform: translateY(-7px); border-color: rgba(192, 132, 252, 0.22); box-shadow: 0 28px 56px rgba(0,0,0,0.45); }
+    .proj-thumb { width: 100%; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; font-size: 3rem; transition: transform 0.3s; }
+    .proj-card:hover .proj-thumb { transform: scale(1.04); }
+    .proj-info { padding: 1.5rem; }
+    .proj-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #c084fc; margin-bottom: 0.45rem; }
+    .proj-info h3 { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.45rem; }
+    .proj-info p { font-size: 0.875rem; color: rgba(255,255,255,0.48); line-height: 1.7; }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem; margin-top: 3.5rem; }
+    .testi-card { background: rgba(255,255,255,0.022); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 2rem; transition: border-color 0.25s; }
+    .testi-card:hover { border-color: rgba(192,132,252,0.2); }
+    .stars { color: #c084fc; font-size: 1rem; margin-bottom: 1rem; }
+    .testi-body { font-size: 0.91rem; color: rgba(255,255,255,0.65); line-height: 1.78; margin-bottom: 1.5rem; }
+    .testi-author { display: flex; align-items: center; gap: 0.75rem; }
+    .author-av { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; }
+    .author-name { font-size: 0.875rem; font-weight: 600; }
+    .author-role { font-size: 0.76rem; color: rgba(255,255,255,0.4); }
+    .cta-section { padding: 8rem 2rem; text-align: center; position: relative; overflow: hidden; }
+    .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(800px, 95vw); height: 400px; background: radial-gradient(ellipse, rgba(147,51,234,0.16), transparent 70%); pointer-events: none; }
+    .cta-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+    .cta-section .section-sub { text-align: center; max-width: 460px; margin: 1.25rem auto 2.75rem; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    footer { border-top: 1px solid rgba(255,255,255,0.055); padding: 2.5rem 2rem; max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem; }
+    .footer-logo { font-size: 1.2rem; font-weight: 900; letter-spacing: -0.03em; background: linear-gradient(130deg, #fff, #c084fc, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
+    .reveal { opacity: 0; }
+    @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } footer { flex-direction: column; text-align: center; } .footer-links { justify-content: center; } }
+    @media (max-width: 520px) { #nav-links .hide-mob { display: none; } #nav-links { gap: 1rem; } }
+  </style>
+</head>
+<body>
+
+  <!-- ANIMATED LOGO -->
+  <div id="animated-logo" aria-label="Skill Star homepage">Skill Star</div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Primary navigation">
+    <div id="nav-logo-slot" aria-hidden="true">Skill Star</div>
+    <div id="nav-links">
+      <a href="#services" class="hide-mob">Services</a>
+      <a href="#work"     class="hide-mob">Work</a>
+      <a href="#about"    class="hide-mob">About</a>
+      <a href="#contact"  class="nav-cta">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div id="hero-content">
+      <p id="hero-tagline">
+        We craft <em>premium digital experiences</em> &mdash; websites, apps &amp; campaigns &mdash;
+        that turn visitors into <em>loyal customers</em>.
+      </p>
+      <div id="hero-actions">
+        <a href="#contact" class="btn-hero-primary">Claim Free Growth Audit &rarr;</a>
+        <a href="#work"    class="btn-hero-ghost">View Our Work</a>
+      </div>
+      <div id="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar" id="about">
+    <div class="stats-grid">
+      <div class="reveal"><div class="stat-num">150+</div><div class="stat-lbl">Projects Delivered</div></div>
+      <div class="reveal"><div class="stat-num">8+</div><div class="stat-lbl">Years Experience</div></div>
+      <div class="reveal"><div class="stat-num">98%</div><div class="stat-lbl">Client Retention</div></div>
+      <div class="reveal"><div class="stat-num">4.9&starf;</div><div class="stat-lbl">Average Rating</div></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-wrap">
+      <div class="reveal"><span class="section-badge">&#10022; What We Do</span></div>
+      <div class="reveal">
+        <h2 class="section-hl">Services built for<br><span class="text-grad">modern brands</span></h2>
+        <p class="section-sub">From strategy to launch &mdash; end-to-end digital solutions that make a measurable impact.</p>
+      </div>
+      <div class="services-grid">
+        <div class="svc-card reveal" style="--glow:rgba(147,51,234,0.12)">
+          <div class="svc-icon" style="background:rgba(147,51,234,0.15)">&#127912;</div>
+          <h3>UI / UX Design</h3>
+          <p>Pixel-perfect interfaces that delight users and convert browsers into buyers.</p>
+        </div>
+        <div class="svc-card reveal" style="--glow:rgba(99,102,241,0.12)">
+          <div class="svc-icon" style="background:rgba(99,102,241,0.15)">&#9889;</div>
+          <h3>Web Development</h3>
+          <p>Blazing-fast sites and apps built with modern tech stacks and best practices.</p>
+        </div>
+        <div class="svc-card reveal" style="--glow:rgba(236,72,153,0.12)">
+          <div class="svc-icon" style="background:rgba(236,72,153,0.15)">&#128241;</div>
+          <h3>Mobile Apps</h3>
+          <p>Native &amp; cross-platform apps that users love to open every single day.</p>
+        </div>
+        <div class="svc-card reveal" style="--glow:rgba(16,185,129,0.12)">
+          <div class="svc-icon" style="background:rgba(16,185,129,0.15)">&#128200;</div>
+          <h3>Digital Marketing</h3>
+          <p>Data-driven campaigns that compound traffic, leads, and revenue over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="work" style="background:rgba(255,255,255,0.012);border-top:1px solid rgba(255,255,255,0.04)">
+    <div class="section-wrap">
+      <div class="reveal"><span class="section-badge">&#10022; Our Work</span></div>
+      <div class="reveal">
+        <h2 class="section-hl">Projects that<br><span class="text-grad">speak for themselves</span></h2>
+      </div>
+      <div class="projects-grid">
+        <div class="proj-card reveal">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#1a0533,#3b0764)">&#128640;</div>
+          <div class="proj-info">
+            <div class="proj-tag">SaaS Platform</div>
+            <h3>Rokea Analytics</h3>
+            <p>Full-stack SaaS with real-time dashboards. 40% conversion lift post-launch.</p>
+          </div>
+        </div>
+        <div class="proj-card reveal">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#022c22,#064e3b)">&#127807;</div>
+          <div class="proj-info">
+            <div class="proj-tag">E-Commerce</div>
+            <h3>Seeds Market</h3>
+            <p>Organic brand redesign driving 3&times; revenue growth within 6 months.</p>
+          </div>
+        </div>
+        <div class="proj-card reveal">
+          <div class="proj-thumb" style="background:linear-gradient(135deg,#1c1917,#44403c)">&#9992;&#65039;</div>
+          <div class="proj-info">
+            <div class="proj-tag">Travel App</div>
+            <h3>NextTrip</h3>
+            <p>AI-powered travel companion &mdash; 50K+ downloads in the launch month.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="border-top:1px solid rgba(255,255,255,0.04)">
+    <div class="section-wrap">
+      <div class="reveal"><span class="section-badge">&#10022; Client Love</span></div>
+      <div class="reveal"><h2 class="section-hl">What our clients say</h2></div>
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testi-body">"Skill Star completely transformed our online presence. Within 3 months, inquiries increased by 280%. Absolutely exceptional work."</p>
+          <div class="testi-author">
+            <div class="author-av" style="background:linear-gradient(135deg,#9333ea,#7c3aed)">AK</div>
+            <div><div class="author-name">Arjun Kumar</div><div class="author-role">CEO, Rokea Solutions</div></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testi-body">"The team's attention to detail is unmatched. Our app launched on time, on budget, and users absolutely love the experience they delivered."</p>
+          <div class="testi-author">
+            <div class="author-av" style="background:linear-gradient(135deg,#059669,#047857)">PM</div>
+            <div><div class="author-name">Priya Mehta</div><div class="author-role">Founder, Seeds Market</div></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testi-body">"Outstanding results. Our digital campaigns now generate 5&times; ROI thanks to Skill Star's disciplined, data-driven approach to growth."</p>
+          <div class="testi-author">
+            <div class="author-av" style="background:linear-gradient(135deg,#0284c7,#0369a1)">SR</div>
+            <div><div class="author-name">Siddharth Rao</div><div class="author-role">Marketing Head, NextTrip</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="cta-section">
+    <div class="cta-inner">
+      <div class="reveal"><span class="section-badge">&#10022; Let's Build Together</span></div>
+      <h2 class="section-hl reveal" style="margin-top:1rem">Ready to grow your<br><span class="text-grad">digital presence?</span></h2>
+      <p class="section-sub reveal">Book a free 30-minute growth audit. No strings attached. Let's see exactly how we can transform your business.</p>
+      <div class="cta-btns reveal">
+        <a href="tel:+918925845871" class="btn-hero-primary">Book Free Audit &rarr;</a>
+        <a href="https://wa.me/918925845871" target="_blank" rel="noopener" class="btn-hero-ghost">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Skill Star</div>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Skill Star. All rights reserved.</p>
+  </footer>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* ── LOGO SCROLL ANIMATION ── */
+    function initLogoAnimation() {
+      const logo        = document.getElementById('animated-logo');
+      const navbar      = document.getElementById('navbar');
+      const navLinks    = document.getElementById('nav-links');
+      const navSlot     = document.getElementById('nav-logo-slot');
+      const heroTagline = document.getElementById('hero-tagline');
+      const heroActions = document.getElementById('hero-actions');
+      const scrollInd   = document.getElementById('scroll-indicator');
+      if (!logo || !navSlot) return;
+
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+
+      /*
+        Place logo at top:0, left:0 and use GSAP x/y to
+        translate it to the viewport center.
+        xPercent/yPercent subtract the logo's own half-size,
+        keeping the center point at exactly vw/2, vh/2.
+      */
+      gsap.set(logo, {
+        position: 'fixed', top: 0, left: 0,
+        x: vw / 2, y: vh / 2,
+        xPercent: -50, yPercent: -50
+      });
+
+      /* Target: center of the invisible nav slot */
+      const slot    = navSlot.getBoundingClientRect();
+      const targetX = slot.left + slot.width  / 2;
+      const targetY = slot.top  + slot.height / 2;
+      const targetFs = getComputedStyle(navSlot).fontSize;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#hero',
+          start: 'top top',
+          end: '+=750',
+          pin: true,
+          anticipatePin: 1,
+          scrub: 0.75,
+          onUpdate(self) {
+            navbar.classList.toggle('nav-scrolled', self.progress > 0.25);
+          }
+        }
+      });
+
+      /* 1 — Logo flies from center → nav slot */
+      tl.to(logo, {
+        x: targetX, y: targetY,
+        fontSize: targetFs,
+        ease: 'none', duration: 1
+      }, 0);
+
+      /* 2 — Hero content fades out */
+      tl.to([heroTagline, heroActions, scrollInd], {
+        autoAlpha: 0, y: -28,
+        ease: 'none', duration: 0.45
+      }, 0);
+
+      /* 3 — Nav links fade in */
+      tl.to(navLinks, {
+        opacity: 1,
+        ease: 'none', duration: 0.4
+      }, 0.55);
+    }
+
+    /* ── SECTION REVEAL ANIMATIONS ── */
+    function initRevealAnimations() {
+      document.querySelectorAll('.reveal').forEach((el, i) => {
+        gsap.from(el, {
+          scrollTrigger: { trigger: el, start: 'top 90%' },
+          autoAlpha: 0, y: 28,
+          duration: 0.65,
+          delay: (i % 4) * 0.06,
+          ease: 'power2.out'
+        });
+      });
+    }
+
+    /* ── HERO STAR PARTICLES (canvas) ── */
+    function initStars() {
+      const hero   = document.getElementById('hero');
+      const canvas = document.createElement('canvas');
+      canvas.style.cssText = 'position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0.5';
+      hero.prepend(canvas);
+      const ctx = canvas.getContext('2d');
+      let W, H, stars = [];
+
+      function resize() { W = canvas.width = hero.offsetWidth; H = canvas.height = hero.offsetHeight; }
+      function mkStar() {
+        return { x: Math.random()*W, y: Math.random()*H, r: Math.random()*1.1+0.2,
+                 a: Math.random(), da: (Math.random()*0.004+0.001)*(Math.random()<0.5?1:-1),
+                 vy: Math.random()*0.04-0.02 };
+      }
+      function init() { resize(); stars = Array.from({length:160}, mkStar); }
+      function draw() {
+        ctx.clearRect(0,0,W,H);
+        stars.forEach(s => {
+          s.a += s.da; if(s.a<=0||s.a>=1) s.da*=-1;
+          s.y += s.vy; if(s.y<0) s.y=H; if(s.y>H) s.y=0;
+          ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+          ctx.fillStyle = 'rgba(255,255,255,'+s.a*0.7+')'; ctx.fill();
+        });
+        requestAnimationFrame(draw);
+      }
+      window.addEventListener('resize', resize);
+      init(); draw();
+    }
+
+    /* ── RESIZE HANDLER ── */
+    let resizeDebounce;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeDebounce);
+      resizeDebounce = setTimeout(() => ScrollTrigger.refresh(), 220);
+    });
+
+    /* ── INIT (wait for fonts so slot rect is accurate) ── */
+    document.fonts.ready.then(() => {
+      initLogoAnimation();
+      initRevealAnimations();
+      initStars();
+    });
+  </script>
+</body>
+</html>

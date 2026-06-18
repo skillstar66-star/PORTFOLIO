@@ -197,10 +197,7 @@
     flex-direction: column;
     padding-top: 40px !important;
     padding-bottom: 64px !important;
-    background-image: linear-gradient(to bottom, rgba(8, 6, 13, 0.75) 0%, rgba(8, 6, 13, 0.98) 100%), url('/images/projects/hero%20bg.png');
-    background-size: cover;
-    background-position: 70% center;
-    background-repeat: no-repeat;
+    background: #08060d;
   }
 
   .mobile-hero-header {
@@ -1070,7 +1067,7 @@
   }
 
   .mobile-testimonial-client {
-    display: flex;
+    display: none !important;
     align-items: center;
     gap: 12px;
     margin-top: 8px;
