@@ -775,6 +775,7 @@ function App() {
   const [expandedAbout, setExpandedAbout] = useState<number[]>([]);
   const [expandedFooter, setExpandedFooter] = useState<string[]>([]);
   const [activeHeroStatIdx, setActiveHeroStatIdx] = useState<number>(0);
+  const [selectedTeamMember, setSelectedTeamMember] = useState<any>(null);
 
   const filteredProjects = (selectedCategory === 'All' || selectedCategory === 'All Projects')
     ? projectsData
@@ -2286,7 +2287,15 @@ function App() {
                 { type: 'instagram', url: '#' },
                 { type: 'twitter', url: '#' },
                 { type: 'linkedin', url: '#' }
-              ]
+              ],
+              skills: ['Business Strategy', 'Brand Development', 'Client Relations', 'Digital Marketing', 'Team Leadership', 'Growth Hacking'],
+              timeline: [
+                { year: '2018', title: 'Co-Founded SkillStar', desc: 'Launched the digital agency with a vision to transform brands through creative innovation.' },
+                { year: '2020', title: 'Expanded Operations', desc: 'Scaled the team and diversified service offerings across multiple verticals.' },
+                { year: '2022', title: 'Strategic Partnerships', desc: 'Forged key industry alliances, driving 200% revenue growth.' },
+                { year: '2024', title: 'AI-Driven Solutions', desc: 'Pioneered AI-integrated marketing strategies for enterprise clients.' }
+              ],
+              achievements: ['200+ Brands Transformed', '50+ Enterprise Clients', 'Top 10 Agency Award 2023']
             },
             {
               name: 'Rohan R',
@@ -2300,7 +2309,15 @@ function App() {
                 { type: 'instagram', url: '#' },
                 { type: 'twitter', url: '#' },
                 { type: 'linkedin', url: '#' }
-              ]
+              ],
+              skills: ['Creative Direction', 'Brand Identity', 'Visual Strategy', 'Project Management', 'Content Strategy', 'Innovation'],
+              timeline: [
+                { year: '2018', title: 'Co-Founded SkillStar', desc: 'Established creative frameworks and brand identity systems.' },
+                { year: '2020', title: 'Creative Excellence', desc: 'Led award-winning campaigns for national and international brands.' },
+                { year: '2022', title: 'Design Innovation', desc: 'Introduced motion design and interactive storytelling to the portfolio.' },
+                { year: '2024', title: 'Unified Brand Solutions', desc: 'Developed end-to-end brand ecosystems for Fortune 500 companies.' }
+              ],
+              achievements: ['150+ Brand Identities Created', 'Award-Winning Campaigns', 'Industry Speaker 2023']
             },
             {
               name: 'Anto Sheeba',
@@ -2321,7 +2338,14 @@ function App() {
                 { type: 'instagram', url: '#' },
                 { type: 'twitter', url: '#' },
                 { type: 'email', url: 'mailto:sheeba@skillstar.com' }
-              ]
+              ],
+              skills: ['Operations Management', 'Workflow Optimization', 'Team Coordination', 'HR Management', 'Client Communication'],
+              timeline: [
+                { year: '2021', title: 'Joined SkillStar', desc: 'Took charge of administrative operations and team coordination.' },
+                { year: '2022', title: 'Process Optimization', desc: 'Streamlined internal workflows, improving delivery efficiency by 40%.' },
+                { year: '2024', title: 'Administration Head', desc: 'Elevated to lead all operational and administrative functions.' }
+              ],
+              achievements: ['40% Efficiency Improvement', 'Zero Deadline Misses', 'Team Satisfaction Score 98%']
             },
             {
               name: 'Saravanan',
@@ -2342,7 +2366,14 @@ function App() {
                 { type: 'instagram', url: '#' },
                 { type: 'behance', url: '#' },
                 { type: 'email', url: 'mailto:saravanan@skillstar.com' }
-              ]
+              ],
+              skills: ['Video Editing', 'Motion Graphics', 'Color Grading', 'After Effects', 'Premiere Pro', 'DaVinci Resolve'],
+              timeline: [
+                { year: '2019', title: 'Started Video Editing', desc: 'Began professional video editing for brand campaigns and advertisements.' },
+                { year: '2021', title: 'Joined SkillStar', desc: 'Brought expertise in cinematic editing and visual storytelling.' },
+                { year: '2023', title: 'Senior Video Editor', desc: 'Promoted to lead all video production and post-production workflows.' }
+              ],
+              achievements: ['500+ Videos Produced', 'Viral Campaign with 2M+ Views', 'Brand Film Awards Finalist']
             },
             {
               name: 'Dhanusha',
@@ -2361,7 +2392,14 @@ function App() {
                 { type: 'instagram', url: '#' },
                 { type: 'behance', url: '#' },
                 { type: 'email', url: 'mailto:dhanusha@skillstar.com' }
-              ]
+              ],
+              skills: ['UI Design', 'UX Research', 'Figma', 'Prototyping', 'Design Systems', 'User Testing'],
+              timeline: [
+                { year: '2022', title: 'Joined SkillStar', desc: 'Started designing user interfaces for web and mobile platforms.' },
+                { year: '2023', title: 'Design System Lead', desc: 'Built a scalable design system adopted across all client projects.' },
+                { year: '2024', title: 'UX Excellence', desc: 'Achieved 95%+ user satisfaction scores on usability testing.' }
+              ],
+              achievements: ['30+ App Designs', 'Design System Architect', '95% Usability Score']
             },
             {
               name: 'Harini',
@@ -2382,7 +2420,14 @@ function App() {
                 { type: 'instagram', url: '#' },
                 { type: 'github', url: '#' },
                 { type: 'email', url: 'mailto:harini@skillstar.com' }
-              ]
+              ],
+              skills: ['SEO Strategy', 'Technical SEO', 'React Native', 'Flutter', 'Google Analytics', 'App Store Optimization'],
+              timeline: [
+                { year: '2023', title: 'Joined SkillStar', desc: 'Started optimizing client websites for search engine performance.' },
+                { year: '2024', title: 'Mobile App Developer', desc: 'Expanded into hybrid mobile app development using React Native.' },
+                { year: '2025', title: 'SEO Specialist', desc: 'Drove organic traffic growth of 300% for multiple client portfolios.' }
+              ],
+              achievements: ['300% Organic Growth', '15+ Apps Published', 'Page 1 Rankings for 100+ Keywords']
             },
             {
               name: 'Dinesh',
@@ -2401,7 +2446,14 @@ function App() {
                 { type: 'instagram', url: '#' },
                 { type: 'github', url: '#' },
                 { type: 'email', url: 'mailto:dinesh@skillstar.com' }
-              ]
+              ],
+              skills: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'REST APIs', 'Cloud Deployment'],
+              timeline: [
+                { year: '2022', title: 'Joined SkillStar', desc: 'Started building scalable web applications and API integrations.' },
+                { year: '2023', title: 'Lead Developer', desc: 'Led development of enterprise-grade applications for key clients.' },
+                { year: '2024', title: 'Architecture Expert', desc: 'Designed microservices architecture handling 1M+ daily requests.' }
+              ],
+              achievements: ['50+ Web Apps Built', '99.9% Uptime Record', 'Clean Code Champion']
             },
             {
               name: 'Ram',
@@ -2421,7 +2473,14 @@ function App() {
                 { type: 'instagram', url: '#' },
                 { type: 'github', url: '#' },
                 { type: 'email', url: 'mailto:ram@skillstar.com' }
-              ]
+              ],
+              skills: ['React', 'Next.js', 'Firebase', 'PostgreSQL', 'Python', 'Serverless Architecture'],
+              timeline: [
+                { year: '2021', title: 'Started Professional Development', desc: 'Began building full-stack solutions for startups and SMBs.' },
+                { year: '2023', title: 'Joined SkillStar', desc: 'Brought expertise in database architecture and serverless workflows.' },
+                { year: '2025', title: 'Solutions Architect', desc: 'Designing end-to-end technical solutions for enterprise clients.' }
+              ],
+              achievements: ['40+ Projects Delivered', 'Serverless Migration Expert', 'Open Source Contributor']
             }
           ].map((member, idx) => (
             <div className={`team-card ${member.accent}-accent ${member.isFounder ? 'founder-card' : ''}`} key={idx}>
@@ -2501,8 +2560,8 @@ function App() {
                   <span className="experience-label">Experience:</span>
                   <span className="experience-value"> {member.experience}</span>
                 </div>
-                <button className="team-book-btn">
-                  BOOK {member.name.split(' ')[0].toUpperCase()}
+                <button className="team-book-btn" onClick={() => setSelectedTeamMember(member)}>
+                  CHECK {member.name.split(' ')[0].toUpperCase()}
                 </button>
               </div>
             </div>
@@ -2895,6 +2954,133 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Career Experience Modal */}
+      {selectedTeamMember && (
+        <div className="career-modal-overlay" onClick={() => setSelectedTeamMember(null)}>
+          <div className="career-modal" onClick={(e) => e.stopPropagation()}>
+            {/* Close Button */}
+            <button className="career-modal-close" onClick={() => setSelectedTeamMember(null)}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+
+            {/* Modal Header */}
+            <div className="career-modal-header">
+              <div className="career-modal-avatar-wrapper">
+                <div className="career-modal-avatar-ring"></div>
+                <img src={selectedTeamMember.img} alt={selectedTeamMember.name} className="career-modal-avatar" />
+                {selectedTeamMember.isFounder && (
+                  <span className="career-modal-founder-badge">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    FOUNDER
+                  </span>
+                )}
+              </div>
+              <div className="career-modal-header-info">
+                <h2 className="career-modal-name">{selectedTeamMember.name}</h2>
+                <p className="career-modal-role">{selectedTeamMember.role}</p>
+                <div className="career-modal-exp-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  {selectedTeamMember.experience} Experience
+                </div>
+              </div>
+            </div>
+
+            {/* Bio */}
+            <div className="career-modal-bio">
+              <p>{selectedTeamMember.bio}</p>
+            </div>
+
+            {/* Skills */}
+            <div className="career-modal-section">
+              <h3 className="career-modal-section-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                Core Skills
+              </h3>
+              <div className="career-modal-skills">
+                {selectedTeamMember.skills?.map((skill: string, sIdx: number) => (
+                  <span className="career-skill-tag" key={sIdx} style={{ animationDelay: `${sIdx * 0.08}s` }}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Career Timeline */}
+            <div className="career-modal-section">
+              <h3 className="career-modal-section-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Career Journey
+              </h3>
+              <div className="career-timeline">
+                {selectedTeamMember.timeline?.map((item: any, tIdx: number) => (
+                  <div className="career-timeline-item" key={tIdx} style={{ animationDelay: `${tIdx * 0.15}s` }}>
+                    <div className="career-timeline-dot"></div>
+                    <div className="career-timeline-connector"></div>
+                    <div className="career-timeline-content">
+                      <span className="career-timeline-year">{item.year}</span>
+                      <h4 className="career-timeline-title">{item.title}</h4>
+                      <p className="career-timeline-desc">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Achievements */}
+            <div className="career-modal-section">
+              <h3 className="career-modal-section-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                Key Achievements
+              </h3>
+              <div className="career-achievements-grid">
+                {selectedTeamMember.achievements?.map((ach: string, aIdx: number) => (
+                  <div className="career-achievement-card" key={aIdx} style={{ animationDelay: `${aIdx * 0.1}s` }}>
+                    <div className="career-achievement-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                      </svg>
+                    </div>
+                    <span>{ach}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="career-modal-cta">
+              <a
+                href={`https://wa.me/918925845871?text=Hi! I'd like to connect with ${selectedTeamMember.name} regarding a project.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="career-modal-cta-btn"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+                </svg>
+                Connect via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Mobile-Only Lead Capture Bottom Sheet Drawer */}
       <div 
