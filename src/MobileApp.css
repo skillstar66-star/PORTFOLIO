@@ -491,6 +491,77 @@
     line-height: 1.5;
   }
 
+  /* Mobile Leadership styling */
+  .mobile-leadership {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+
+  .mobile-leadership-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mobile-leadership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mobile-leadership-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .mobile-leadership-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+
+  .mobile-leadership-info h5 {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 2px 0;
+  }
+
+  .mobile-leadership-role {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent-purple);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .mobile-leadership-bio {
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
   /* Timeline Milestone Layout */
   .mobile-timeline {
     margin-top: 40px;

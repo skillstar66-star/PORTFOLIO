@@ -281,6 +281,188 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    title: 'Ayuruvedha Wellness',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'emerald',
+    color: '#059669',
+    rgb: '5, 150, 105',
+    img: '/images/projects/ayurveda_thumbnail.png',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'AOS Library', 'Responsive Design'],
+    description: 'A premium, responsive Ayurvedic wellness brand website showcasing herbal treatments, products, therapies, and custom contact flows.',
+    shortDesc: 'Ayurvedic Wellness & Herbal Retreat Portal',
+    details: 'Designed and built an elegant digital brand portal for Ayuruvedha Wellness. Integrates smooth scroll scroll-triggered animations (AOS library), customized booking pathways for therapies, interactive product showcase carousels, and response-optimized contact integrations.',
+    features: [
+      'Responsive organic-themed brand showcase',
+      'Smooth scroll animations and interactive product slider cards',
+      'Instant booking contact form validation & interactive maps'
+    ],
+    client: 'Ayuruvedha Wellness',
+    year: '2026',
+    link: 'https://skillstardevsrc-sys.github.io/ayuruvedha/#',
+    metaLeft: 'HTML5 • CSS3 • AOS Library',
+    actionText: 'View Live Site',
+    industry: 'Ayurvedic Healthcare',
+    timeline: '4 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    title: 'Elite Real Estate',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'gold',
+    color: '#d4af37',
+    rgb: '212, 175, 55',
+    img: '/images/projects/realestate_thumbnail.png',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Google Maps API', 'Swiper.js'],
+    description: 'A premium, high-conversion real estate listing and luxury villa booking portal with interactive filtering and virtual tours.',
+    shortDesc: 'Luxury Real Estate & Villa Booking Portal',
+    details: 'Designed and engineered a legacy real estate showcase portal. Integrates custom Swiper dynamic carousels, responsive property filter grids, interactive Google Maps location APIs, and secured booking lead generation forms.',
+    features: [
+      'Interactive luxury property listings & search filter sorting',
+      'Integrated location maps, proximity logs & virtual tours',
+      'Responsive lead forms & direct consultant booking channels'
+    ],
+    client: 'Elite Properties',
+    year: '2026',
+    link: 'https://skillstardevsrc-sys.github.io/realestate/',
+    metaLeft: 'HTML5 • Swiper.js • Lead Gen',
+    actionText: 'Explore Properties',
+    industry: 'Real Estate & Hospitality',
+    timeline: '5 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    title: 'Dental Care Hospital',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'teal',
+    color: '#0d9488',
+    rgb: '13, 148, 136',
+    img: '/images/projects/dental_thumbnail.png',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'FontAwesome', 'AOS Library'],
+    description: 'A premium, responsive dental clinic and hospital website featuring appointment scheduling, treatments directory, and doctor profiles.',
+    shortDesc: 'Modern Dental Clinic & Hospital Portal',
+    details: 'Designed and developed a premium medical portal for Dental Care Hospital. Integrates interactive treatment list grids, detailed doctor profile showcases, custom online booking forms, patient testimonials, and SEO-optimized local clinic schema structures.',
+    features: [
+      'Interactive dental treatment directories & pricing structures',
+      'Advanced appointment reservation logic & scheduling hooks',
+      'Fully responsive doctor profile carousels & contact pathways'
+    ],
+    client: 'Dental Care Hospital',
+    year: '2026',
+    link: 'https://skillstardevsrc-sys.github.io/dental-hospital/',
+    metaLeft: 'HTML5 • CSS3 • Clinic Schema',
+    actionText: 'Book Appointment',
+    industry: 'Healthcare & Dental Care',
+    timeline: '4 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    title: 'Elite Beauty Saloon',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'magenta',
+    color: '#db2777',
+    rgb: '219, 39, 119',
+    img: '/images/projects/beauty_thumbnail.png',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Google Fonts', 'AOS Library'],
+    description: 'A premium, responsive beauty saloon and luxury wellness spa website with custom styling catalogs and booking triggers.',
+    shortDesc: 'Luxury Beauty Saloon & Wellness Spa Portal',
+    details: 'Designed and engineered an elite digital portal for Elite Beauty Saloon. Integrates sleek treatment and service catalogs, stylistic pricing blocks, custom hair/beauty trend showcases, and mobile-responsive appointment pathways.',
+    features: [
+      'Interactive beauty styling treatment catalogs & services lists',
+      'Elegant pricing grids & direct beauty consult scheduling forms',
+      'Fully responsive service card carousels & testimonial boards'
+    ],
+    client: 'Elite Beauty Saloon',
+    year: '2026',
+    link: 'https://skillstardevsrc-sys.github.io/beauty-saloon-final/',
+    metaLeft: 'HTML5 • CSS3 • Spa Catalogs',
+    actionText: 'Book Service',
+    industry: 'Beauty & Wellness',
+    timeline: '4 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    title: 'Titan Fitness Gym',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'orange',
+    color: '#ea580c',
+    rgb: '234, 88, 12',
+    img: '/images/projects/gym_thumbnail.png',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'FontAwesome', 'AOS Library'],
+    description: 'A high-energy, responsive gym and fitness club website showcasing membership plans, trainer directories, and training classes.',
+    shortDesc: 'Premium Fitness Club & Gym Website',
+    details: 'Designed and engineered a high-performance digital portal for Titan Fitness Gym. Integrates active trainer showcases, membership pricing calculators, dynamic training class listings, and secure registration call-to-actions.',
+    features: [
+      'Interactive fitness class directories & trainer profile cards',
+      'Elegant membership plans table & custom booking forms',
+      'Fully responsive media sliders & motivational quote carousels'
+    ],
+    client: 'Titan Fitness Gym',
+    year: '2026',
+    link: 'https://skillstardevsrc-sys.github.io/gym-website/',
+    metaLeft: 'HTML5 • CSS3 • Fitness Schedules',
+    actionText: 'Join Titan Gym',
+    industry: 'Fitness & Health',
+    timeline: '4 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    title: 'La Cafe Coffee House',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'rose',
+    color: '#be123c',
+    rgb: '190, 18, 60',
+    img: '/images/projects/cafe_thumbnail.png',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Google Fonts', 'AOS Library'],
+    description: 'A cozy, premium coffee shop and cafe website showcasing custom menus, seasonal brews, and local table booking pathways.',
+    shortDesc: 'Modern Coffee Shop & Cafe Website',
+    details: 'Designed and engineered a legacy digital portal for La Cafe Coffee House. Integrates cozy responsive menu grids, online order pathways, interactive maps for physical locations, and a streamlined private booking lead funnel.',
+    features: [
+      'Interactive visual menus & beverage details catalogs',
+      'Table reservations & event hosting appointment forms',
+      'Fully responsive reviews grids & local maps integrations'
+    ],
+    client: 'La Cafe',
+    year: '2026',
+    link: 'https://ramkumar143z.github.io/La-Cafe/',
+    metaLeft: 'HTML5 • CSS3 • Menu Catalogs',
+    actionText: 'Explore Menu',
+    industry: 'Food & Beverage',
+    timeline: '4 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    title: 'Elite Eye Hospital',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'teal',
+    color: '#0d9488',
+    rgb: '13, 148, 136',
+    img: '/images/projects/eye_thumbnail.png',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Google Fonts', 'AOS Library'],
+    description: 'A premium, responsive eye care hospital and surgery center website featuring appointment reservations and treatments catalogs.',
+    shortDesc: 'Modern Eye Hospital & Ophthalmology Portal',
+    details: 'Designed and developed a premium medical portal for Elite Eye Hospital. Integrates interactive clinical services catalog grids, detailed surgeon and specialist profile showcases, patient testimonial sliders, and online appointment booking forms.',
+    features: [
+      'Interactive eye treatments directory & diagnostic catalogs',
+      'Advanced appointment booking pathways & scheduling forms',
+      'Fully responsive doctor profile displays & patients review systems'
+    ],
+    client: 'Elite Eye Hospital',
+    year: '2026',
+    link: 'https://skillstardevsrc-sys.github.io/eye-hospital/',
+    metaLeft: 'HTML5 • CSS3 • Clinic Schema',
+    actionText: 'Book Consult',
+    industry: 'Healthcare & Ophthalmology',
+    timeline: '4 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
     title: 'Organic Search Dominance',
     category: 'Digital Marketing',
     badge: 'SEO',
@@ -744,6 +926,187 @@ const renderProjectScreen = (project: Project, isMobile: boolean) => {
     </div>
   );
 };
+
+interface TeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  img: string;
+  accent: string;
+  isFounder?: boolean;
+  experience: string;
+  icon?: React.ReactNode;
+  socials: { type: string; url: string; }[];
+  skills: string[];
+  timeline: { year: string; title: string; desc: string; }[];
+  achievements: string[];
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    name: 'Anto Sheeba',
+    role: 'Administration Head',
+    bio: 'Supervising operations, workflows and corporate timelines.',
+    img: '/images/team/sheeba.png',
+    accent: 'purple',
+    experience: '5 Years',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+    ),
+    socials: [
+      { type: 'instagram', url: '#' },
+      { type: 'twitter', url: '#' },
+      { type: 'email', url: 'mailto:sheeba@skillstar.com' }
+    ],
+    skills: ['Operations Management', 'Workflow Optimization', 'Team Coordination', 'HR Management', 'Client Communication'],
+    timeline: [
+      { year: '2021', title: 'Joined SkillStar', desc: 'Took charge of administrative operations and team coordination.' },
+      { year: '2022', title: 'Process Optimization', desc: 'Streamlined internal workflows, improving delivery efficiency by 40%.' },
+      { year: '2024', title: 'Administration Head', desc: 'Elevated to lead all operational and administrative functions.' }
+    ],
+    achievements: ['40% Efficiency Improvement', 'Zero Deadline Misses', 'Team Satisfaction Score 98%']
+  },
+  {
+    name: 'Saravanan',
+    role: 'Senior Video Editor',
+    bio: 'Designing high-converting marketing collaterals and visual assets.',
+    img: '/images/team/saro.png',
+    accent: 'purple',
+    experience: '6 Years',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 9 20 8 18 8C16 8 16 6 16 5C16 3 14 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+        <circle cx="7.5" cy="10.5" r="1.5"></circle>
+        <circle cx="11.5" cy="7.5" r="1.5"></circle>
+        <circle cx="16.5" cy="11.5" r="1.5"></circle>
+      </svg>
+    ),
+    socials: [
+      { type: 'instagram', url: '#' },
+      { type: 'behance', url: '#' },
+      { type: 'email', url: 'mailto:saravanan@skillstar.com' }
+    ],
+    skills: ['Video Editing', 'Motion Graphics', 'Color Grading', 'After Effects', 'Premiere Pro', 'DaVinci Resolve'],
+    timeline: [
+      { year: '2019', title: 'Started Video Editing', desc: 'Began professional video editing for brand campaigns and advertisements.' },
+      { year: '2021', title: 'Joined SkillStar', desc: 'Brought expertise in cinematic editing and visual storytelling.' },
+      { year: '2023', title: 'Senior Video Editor', desc: 'Promoted to lead all video production and post-production workflows.' }
+    ],
+    achievements: ['500+ Videos Produced', 'Viral Campaign with 2M+ Views', 'Brand Film Awards Finalist']
+  },
+  {
+    name: 'Dhanusha',
+    role: 'UI/UX Designer',
+    bio: 'Engineering wireframe aesthetics and seamless user journeys.',
+    img: '/images/team/dhanusha.png',
+    accent: 'purple',
+    experience: '4 Years',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 20h9"></path>
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+      </svg>
+    ),
+    socials: [
+      { type: 'instagram', url: '#' },
+      { type: 'behance', url: '#' },
+      { type: 'email', url: 'mailto:dhanusha@skillstar.com' }
+    ],
+    skills: ['UI Design', 'UX Research', 'Figma', 'Prototyping', 'Design Systems', 'User Testing'],
+    timeline: [
+      { year: '2022', title: 'Joined SkillStar', desc: 'Started designing user interfaces for web and mobile platforms.' },
+      { year: '2023', title: 'Design System Lead', desc: 'Built a scalable design system adopted across all client projects.' },
+      { year: '2024', title: 'UX Excellence', desc: 'Achieved 95%+ user satisfaction scores on usability testing.' }
+    ],
+    achievements: ['30+ App Designs', 'Design System Architect', '95% Usability Score']
+  },
+  {
+    name: 'Harini',
+    role: 'SEO & App Developer',
+    bio: 'Optimizing technical health models and building hybrid mobile interfaces.',
+    img: '/images/team/harini.png',
+    accent: 'purple',
+    experience: '3 Years',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="4" y1="9" x2="20" y2="9"></line>
+        <line x1="4" y1="15" x2="20" y2="15"></line>
+        <line x1="10" y1="3" x2="8" y2="21"></line>
+        <line x1="16" y1="3" x2="14" y2="21"></line>
+      </svg>
+    ),
+    socials: [
+      { type: 'instagram', url: '#' },
+      { type: 'github', url: '#' },
+      { type: 'email', url: 'mailto:harini@skillstar.com' }
+    ],
+    skills: ['SEO Strategy', 'Technical SEO', 'React Native', 'Flutter', 'Google Analytics', 'App Store Optimization'],
+    timeline: [
+      { year: '2023', title: 'Joined SkillStar', desc: 'Started optimizing client websites for search engine performance.' },
+      { year: '2024', title: 'Mobile App Developer', desc: 'Expanded into hybrid mobile app development using React Native.' },
+      { year: '2025', title: 'SEO Specialist', desc: 'Drove organic traffic growth of 300% for multiple client portfolios.' }
+    ],
+    achievements: ['300% Organic Growth', '15+ Apps Published', 'Page 1 Rankings for 100+ Keywords']
+  },
+  {
+    name: 'Dinesh',
+    role: 'Full Stack Developer',
+    bio: 'Writing clean backend API integrations and responsive frontends.',
+    img: '/images/team/dinesh.jpeg',
+    accent: 'purple',
+    experience: '4 Years',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+    ),
+    socials: [
+      { type: 'instagram', url: '#' },
+      { type: 'github', url: '#' },
+      { type: 'email', url: 'mailto:dinesh@skillstar.com' }
+    ],
+    skills: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'REST APIs', 'Cloud Deployment'],
+    timeline: [
+      { year: '2022', title: 'Joined SkillStar', desc: 'Started building scalable web applications and API integrations.' },
+      { year: '2023', title: 'Lead Developer', desc: 'Led development of enterprise-grade applications for key clients.' },
+      { year: '2024', title: 'Architecture Expert', desc: 'Designed microservices architecture handling 1M+ daily requests.' }
+    ],
+    achievements: ['50+ Web Apps Built', '99.9% Uptime Record', 'Clean Code Champion']
+  },
+  {
+    name: 'Ram',
+    role: 'Full Stack Developer',
+    bio: 'Developing data layer queries and serverless database workflows.',
+    img: '/images/team/Ram.png',
+    accent: 'purple',
+    experience: '5 Years',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+      </svg>
+    ),
+    socials: [
+      { type: 'instagram', url: '#' },
+      { type: 'github', url: '#' },
+      { type: 'email', url: 'mailto:ram@skillstar.com' }
+    ],
+    skills: ['React', 'Next.js', 'Firebase', 'PostgreSQL', 'Python', 'Serverless Architecture'],
+    timeline: [
+      { year: '2021', title: 'Started Professional Development', desc: 'Began building full-stack solutions for startups and SMBs.' },
+      { year: '2023', title: 'Joined SkillStar', desc: 'Brought expertise in database architecture and serverless workflows.' },
+      { year: '2025', title: 'Solutions Architect', desc: 'Designing end-to-end technical solutions for enterprise clients.' }
+    ],
+    achievements: ['40+ Projects Delivered', 'Serverless Migration Expert', 'Open Source Contributor']
+  }
+];
 
 function App() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -1884,6 +2247,28 @@ function App() {
                 </div>
               </div>
 
+              <div className="about-leadership">
+                <h4 className="leadership-title"><span className="cyan-star">◆</span> Our Leadership</h4>
+                <div className="leadership-grid">
+                  <div className="leadership-card">
+                    <div className="leadership-avatar purple-gradient-avatar">RP</div>
+                    <div className="leadership-info">
+                      <h5>Rahannath P R</h5>
+                      <span className="leadership-role">Co-Founder & Director</span>
+                      <p className="leadership-bio">Leading strategic partnerships & client scale-up trajectories.</p>
+                    </div>
+                  </div>
+                  <div className="leadership-card">
+                    <div className="leadership-avatar blue-gradient-avatar">RR</div>
+                    <div className="leadership-info">
+                      <h5>Rohan R</h5>
+                      <span className="leadership-role">Co-Founder & Director</span>
+                      <p className="leadership-bio">Directing creative output & unified brand solutions.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <button className="btn-outline about-btn" onClick={() => setShowLeadPopup(true)}>
                 Book Free Discovery Call <span>→</span>
               </button>
@@ -2043,6 +2428,28 @@ function App() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mobile-leadership">
+          <h4 className="mobile-leadership-title"><span className="cyan-star">◆</span> Our Leadership</h4>
+          <div className="mobile-leadership-cards">
+            <div className="mobile-leadership-card">
+              <div className="mobile-leadership-avatar purple-gradient-avatar">RP</div>
+              <div className="mobile-leadership-info">
+                <h5>Rahannath P R</h5>
+                <span className="mobile-leadership-role">Co-Founder & Director</span>
+                <p className="mobile-leadership-bio">Leading strategic partnerships & client scale-up trajectories.</p>
+              </div>
+            </div>
+            <div className="mobile-leadership-card">
+              <div className="mobile-leadership-avatar blue-gradient-avatar">RR</div>
+              <div className="mobile-leadership-info">
+                <h5>Rohan R</h5>
+                <span className="mobile-leadership-role">Co-Founder & Director</span>
+                <p className="mobile-leadership-bio">Directing creative output & unified brand solutions.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mobile-timeline">
@@ -2267,222 +2674,10 @@ function App() {
           </p>
         </div>
 
-        {/* Team Group Banner */}
-        <div className="team-banner-container">
-          <img src="/images/team/banner.png" alt="Dynamic Team Group Photo" className="team-banner-img" />
-          <div className="team-banner-overlay"></div>
-        </div>
+
 
         <div className="team-grid">
-          {[
-            {
-              name: 'Rahannath P R',
-              role: 'Co-Founder & Director',
-              bio: 'Leading strategic partnerships and client scale-up trajectories.',
-              img: '/images/team/Rahannath P R.png',
-              accent: 'purple',
-              isFounder: true,
-              experience: '8 Years',
-              socials: [
-                { type: 'instagram', url: '#' },
-                { type: 'twitter', url: '#' },
-                { type: 'linkedin', url: '#' }
-              ],
-              skills: ['Business Strategy', 'Brand Development', 'Client Relations', 'Digital Marketing', 'Team Leadership', 'Growth Hacking'],
-              timeline: [
-                { year: '2018', title: 'Co-Founded SkillStar', desc: 'Launched the digital agency with a vision to transform brands through creative innovation.' },
-                { year: '2020', title: 'Expanded Operations', desc: 'Scaled the team and diversified service offerings across multiple verticals.' },
-                { year: '2022', title: 'Strategic Partnerships', desc: 'Forged key industry alliances, driving 200% revenue growth.' },
-                { year: '2024', title: 'AI-Driven Solutions', desc: 'Pioneered AI-integrated marketing strategies for enterprise clients.' }
-              ],
-              achievements: ['200+ Brands Transformed', '50+ Enterprise Clients', 'Top 10 Agency Award 2023']
-            },
-            {
-              name: 'Rohan R',
-              role: 'Co-Founder & Director',
-              bio: 'Directing creative output and unified brand solutions.',
-              img: '/images/team/image.png',
-              accent: 'purple',
-              isFounder: true,
-              experience: '8 Years',
-              socials: [
-                { type: 'instagram', url: '#' },
-                { type: 'twitter', url: '#' },
-                { type: 'linkedin', url: '#' }
-              ],
-              skills: ['Creative Direction', 'Brand Identity', 'Visual Strategy', 'Project Management', 'Content Strategy', 'Innovation'],
-              timeline: [
-                { year: '2018', title: 'Co-Founded SkillStar', desc: 'Established creative frameworks and brand identity systems.' },
-                { year: '2020', title: 'Creative Excellence', desc: 'Led award-winning campaigns for national and international brands.' },
-                { year: '2022', title: 'Design Innovation', desc: 'Introduced motion design and interactive storytelling to the portfolio.' },
-                { year: '2024', title: 'Unified Brand Solutions', desc: 'Developed end-to-end brand ecosystems for Fortune 500 companies.' }
-              ],
-              achievements: ['150+ Brand Identities Created', 'Award-Winning Campaigns', 'Industry Speaker 2023']
-            },
-            {
-              name: 'Anto Sheeba',
-              role: 'Administration Head',
-              bio: 'Supervising operations, workflows and corporate timelines.',
-              img: '/images/team/sheeba.png',
-              accent: 'purple',
-              experience: '5 Years',
-              icon: (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6"></line>
-                  <line x1="8" y1="2" x2="8" y2="6"></line>
-                  <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
-              ),
-              socials: [
-                { type: 'instagram', url: '#' },
-                { type: 'twitter', url: '#' },
-                { type: 'email', url: 'mailto:sheeba@skillstar.com' }
-              ],
-              skills: ['Operations Management', 'Workflow Optimization', 'Team Coordination', 'HR Management', 'Client Communication'],
-              timeline: [
-                { year: '2021', title: 'Joined SkillStar', desc: 'Took charge of administrative operations and team coordination.' },
-                { year: '2022', title: 'Process Optimization', desc: 'Streamlined internal workflows, improving delivery efficiency by 40%.' },
-                { year: '2024', title: 'Administration Head', desc: 'Elevated to lead all operational and administrative functions.' }
-              ],
-              achievements: ['40% Efficiency Improvement', 'Zero Deadline Misses', 'Team Satisfaction Score 98%']
-            },
-            {
-              name: 'Saravanan',
-              role: 'Senior Video Editor',
-              bio: 'Designing high-converting marketing collaterals and visual assets.',
-              img: '/images/team/saro.png',
-              accent: 'purple',
-              experience: '6 Years',
-              icon: (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 9 20 8 18 8C16 8 16 6 16 5C16 3 14 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-                  <circle cx="7.5" cy="10.5" r="1.5"></circle>
-                  <circle cx="11.5" cy="7.5" r="1.5"></circle>
-                  <circle cx="16.5" cy="11.5" r="1.5"></circle>
-                </svg>
-              ),
-              socials: [
-                { type: 'instagram', url: '#' },
-                { type: 'behance', url: '#' },
-                { type: 'email', url: 'mailto:saravanan@skillstar.com' }
-              ],
-              skills: ['Video Editing', 'Motion Graphics', 'Color Grading', 'After Effects', 'Premiere Pro', 'DaVinci Resolve'],
-              timeline: [
-                { year: '2019', title: 'Started Video Editing', desc: 'Began professional video editing for brand campaigns and advertisements.' },
-                { year: '2021', title: 'Joined SkillStar', desc: 'Brought expertise in cinematic editing and visual storytelling.' },
-                { year: '2023', title: 'Senior Video Editor', desc: 'Promoted to lead all video production and post-production workflows.' }
-              ],
-              achievements: ['500+ Videos Produced', 'Viral Campaign with 2M+ Views', 'Brand Film Awards Finalist']
-            },
-            {
-              name: 'Dhanusha',
-              role: 'UI/UX Designer',
-              bio: 'Engineering wireframe aesthetics and seamless user journeys.',
-              img: '/images/team/dhanusha.png',
-              accent: 'purple',
-              experience: '4 Years',
-              icon: (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 20h9"></path>
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-                </svg>
-              ),
-              socials: [
-                { type: 'instagram', url: '#' },
-                { type: 'behance', url: '#' },
-                { type: 'email', url: 'mailto:dhanusha@skillstar.com' }
-              ],
-              skills: ['UI Design', 'UX Research', 'Figma', 'Prototyping', 'Design Systems', 'User Testing'],
-              timeline: [
-                { year: '2022', title: 'Joined SkillStar', desc: 'Started designing user interfaces for web and mobile platforms.' },
-                { year: '2023', title: 'Design System Lead', desc: 'Built a scalable design system adopted across all client projects.' },
-                { year: '2024', title: 'UX Excellence', desc: 'Achieved 95%+ user satisfaction scores on usability testing.' }
-              ],
-              achievements: ['30+ App Designs', 'Design System Architect', '95% Usability Score']
-            },
-            {
-              name: 'Harini',
-              role: 'SEO & App Developer',
-              bio: 'Optimizing technical health models and building hybrid mobile interfaces.',
-              img: '/images/team/harini.png',
-              accent: 'purple',
-              experience: '3 Years',
-              icon: (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="4" y1="9" x2="20" y2="9"></line>
-                  <line x1="4" y1="15" x2="20" y2="15"></line>
-                  <line x1="10" y1="3" x2="8" y2="21"></line>
-                  <line x1="16" y1="3" x2="14" y2="21"></line>
-                </svg>
-              ),
-              socials: [
-                { type: 'instagram', url: '#' },
-                { type: 'github', url: '#' },
-                { type: 'email', url: 'mailto:harini@skillstar.com' }
-              ],
-              skills: ['SEO Strategy', 'Technical SEO', 'React Native', 'Flutter', 'Google Analytics', 'App Store Optimization'],
-              timeline: [
-                { year: '2023', title: 'Joined SkillStar', desc: 'Started optimizing client websites for search engine performance.' },
-                { year: '2024', title: 'Mobile App Developer', desc: 'Expanded into hybrid mobile app development using React Native.' },
-                { year: '2025', title: 'SEO Specialist', desc: 'Drove organic traffic growth of 300% for multiple client portfolios.' }
-              ],
-              achievements: ['300% Organic Growth', '15+ Apps Published', 'Page 1 Rankings for 100+ Keywords']
-            },
-            {
-              name: 'Dinesh',
-              role: 'Full Stack Developer',
-              bio: 'Writing clean backend API integrations and responsive frontends.',
-              img: '/images/team/dinesh.jpeg',
-              accent: 'purple',
-              experience: '4 Years',
-              icon: (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              ),
-              socials: [
-                { type: 'instagram', url: '#' },
-                { type: 'github', url: '#' },
-                { type: 'email', url: 'mailto:dinesh@skillstar.com' }
-              ],
-              skills: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'REST APIs', 'Cloud Deployment'],
-              timeline: [
-                { year: '2022', title: 'Joined SkillStar', desc: 'Started building scalable web applications and API integrations.' },
-                { year: '2023', title: 'Lead Developer', desc: 'Led development of enterprise-grade applications for key clients.' },
-                { year: '2024', title: 'Architecture Expert', desc: 'Designed microservices architecture handling 1M+ daily requests.' }
-              ],
-              achievements: ['50+ Web Apps Built', '99.9% Uptime Record', 'Clean Code Champion']
-            },
-            {
-              name: 'Ram',
-              role: 'Full Stack Developer',
-              bio: 'Developing data layer queries and serverless database workflows.',
-              img: '/images/team/Ram.png',
-              accent: 'purple',
-              experience: '5 Years',
-              icon: (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                  <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
-                </svg>
-              ),
-              socials: [
-                { type: 'instagram', url: '#' },
-                { type: 'github', url: '#' },
-                { type: 'email', url: 'mailto:ram@skillstar.com' }
-              ],
-              skills: ['React', 'Next.js', 'Firebase', 'PostgreSQL', 'Python', 'Serverless Architecture'],
-              timeline: [
-                { year: '2021', title: 'Started Professional Development', desc: 'Began building full-stack solutions for startups and SMBs.' },
-                { year: '2023', title: 'Joined SkillStar', desc: 'Brought expertise in database architecture and serverless workflows.' },
-                { year: '2025', title: 'Solutions Architect', desc: 'Designing end-to-end technical solutions for enterprise clients.' }
-              ],
-              achievements: ['40+ Projects Delivered', 'Serverless Migration Expert', 'Open Source Contributor']
-            }
-          ].map((member, idx) => (
+          {teamMembers.map((member, idx) => (
             <div className={`team-card ${member.accent}-accent ${member.isFounder ? 'founder-card' : ''}`} key={idx}>
               <div className="team-image-container">
                 <div className="card-top-action">
