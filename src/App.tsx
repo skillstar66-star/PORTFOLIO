@@ -23,6 +23,7 @@ const getOptimizedPreviewUrl = (url: string) => {
 };
 
 interface Project {
+  logo: string;
   title: string;
   category: string;
   badge: string;
@@ -125,6 +126,7 @@ const videoBrandsData: BrandFolder[] = [
 
 const projectsData: Project[] = [
   {
+    logo: '/images/logos/rokea_logo.png',
     title: 'ROKEA by RK',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -151,6 +153,7 @@ const projectsData: Project[] = [
     services: 'E-commerce, AI Stylist'
   },
   {
+    logo: '/images/logos/seedstherapy_logo.png',
     title: 'Seeds Therapy',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -177,6 +180,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/nexttrip_logo.png',
     title: 'NextTrip Holidays',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -203,6 +207,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/krishnanjali_logo.png',
     title: 'Krishnanjali Music',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -229,6 +234,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/brandify_logo.png',
     title: 'Brandify Agency',
     category: 'Digital Marketing',
     badge: 'BRANDING',
@@ -255,6 +261,7 @@ const projectsData: Project[] = [
     services: 'Digital Marketing'
   },
   {
+    logo: '/images/logos/tattoos_logo.png',
     title: 'Tattoos Center',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -281,6 +288,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/ayurveda_logo.png',
     title: 'Ayuruvedha Wellness',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -307,6 +315,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/realestate_logo.png',
     title: 'Elite Real Estate',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -333,6 +342,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/dental_logo.png',
     title: 'Dental Care Hospital',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -359,6 +369,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/beauty_logo.png',
     title: 'Elite Beauty Saloon',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -385,6 +396,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/gym_logo.png',
     title: 'Titan Fitness Gym',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -411,6 +423,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/cafe_logo.png',
     title: 'La Cafe Coffee House',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -437,6 +450,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/eye_logo.png',
     title: 'Elite Eye Hospital',
     category: 'Websites',
     badge: '★ FEATURED',
@@ -463,6 +477,7 @@ const projectsData: Project[] = [
     services: 'Web Development, UI/UX Design'
   },
   {
+    logo: '/images/logos/seo_logo.png',
     title: 'Organic Search Dominance',
     category: 'Digital Marketing',
     badge: 'SEO',
@@ -489,6 +504,7 @@ const projectsData: Project[] = [
     services: 'SEO Campaign'
   },
   {
+    logo: '/images/logos/no1insurance_logo.png',
     title: 'NO1 Insurance',
     category: 'Web Apps',
     badge: '★ FEATURED',
@@ -2045,50 +2061,6 @@ function App() {
 
             <div className="recent-projects-grid no-scrollbar" ref={recentScrollRef}>
               {projectsData.map((project, idx) => {
-                // Determine icon or letter to render inside the icon box
-                const getIconContent = (title: string, color: string) => {
-                  if (title.includes('Dashboard')) {
-                    return <span style={{ color }}>D</span>;
-                  }
-                  if (title.includes('Luxe')) {
-                    return (
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                      </svg>
-                    );
-                  }
-                  if (title.includes('Krishnanjali') || title.includes('Music')) {
-                    return (
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M9 18V5l12-2v13"></path>
-                        <circle cx="6" cy="18" r="3"></circle>
-                        <circle cx="18" cy="16" r="3"></circle>
-                      </svg>
-                    );
-                  }
-                  if (title.includes('Tattoos') || title.includes('Center')) {
-                    return (
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-13-7-13S5 10.7 5 15a7 7 0 0 0 7 7z"></path>
-                      </svg>
-                    );
-                  }
-                  if (title.includes('NO1') || title.includes('Insurance')) {
-                    return (
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                      </svg>
-                    );
-                  }
-                  if (title.includes('Brandify') || title.includes('Agency')) {
-                    return <span style={{ color }}>B</span>;
-                  }
-                  // Fallback is first letter of title
-                  return <span style={{ color }}>{title[0]}</span>;
-                };
-
                 return (
                   <div 
                     key={idx} 
@@ -2105,7 +2077,11 @@ function App() {
                         className="card-app-icon-box"
                         style={{ backgroundColor: `rgba(${project.rgb}, 0.1)`, borderColor: `rgba(${project.rgb}, 0.2)` }}
                       >
-                        {getIconContent(project.title, project.color)}
+                        <img 
+                          src={project.logo} 
+                          alt={`${project.title} logo`} 
+                          style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }}
+                        />
                       </div>
                       <div className="card-text">
                         <h4>{project.title}</h4>
@@ -2251,7 +2227,6 @@ function App() {
                 <h4 className="leadership-title"><span className="cyan-star">◆</span> Our Leadership</h4>
                 <div className="leadership-grid">
                   <div className="leadership-card">
-                    <div className="leadership-avatar purple-gradient-avatar">RP</div>
                     <div className="leadership-info">
                       <h5>Rahannath P R</h5>
                       <span className="leadership-role">Co-Founder & Director</span>
@@ -2259,7 +2234,6 @@ function App() {
                     </div>
                   </div>
                   <div className="leadership-card">
-                    <div className="leadership-avatar blue-gradient-avatar">RR</div>
                     <div className="leadership-info">
                       <h5>Rohan R</h5>
                       <span className="leadership-role">Co-Founder & Director</span>
@@ -2434,7 +2408,6 @@ function App() {
           <h4 className="mobile-leadership-title"><span className="cyan-star">◆</span> Our Leadership</h4>
           <div className="mobile-leadership-cards">
             <div className="mobile-leadership-card">
-              <div className="mobile-leadership-avatar purple-gradient-avatar">RP</div>
               <div className="mobile-leadership-info">
                 <h5>Rahannath P R</h5>
                 <span className="mobile-leadership-role">Co-Founder & Director</span>
@@ -2442,7 +2415,6 @@ function App() {
               </div>
             </div>
             <div className="mobile-leadership-card">
-              <div className="mobile-leadership-avatar blue-gradient-avatar">RR</div>
               <div className="mobile-leadership-info">
                 <h5>Rohan R</h5>
                 <span className="mobile-leadership-role">Co-Founder & Director</span>

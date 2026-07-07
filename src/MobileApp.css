@@ -699,10 +699,13 @@
 
   .mobile-service-num {
     font-family: var(--font-heading);
-    font-size: 36px;
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.05);
+    font-size: 40px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff 20%, var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     line-height: 1;
+    display: inline-block;
   }
 
   .mobile-service-card h3 {
