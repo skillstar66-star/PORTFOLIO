@@ -529,6 +529,33 @@ const projectsData: Project[] = [
     industry: 'Financial Advisory & Insurance',
     timeline: '10 Weeks',
     services: 'Web Application Development'
+  },
+  {
+    logo: '/images/logos/tesson_logo.png',
+    title: 'Tesson Energy',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'lime',
+    color: '#a3ff12',
+    rgb: '163, 255, 18',
+    img: '/images/projects/tesson_thumbnail.png',
+    tags: ['React', 'Vite', 'Lucide Icons', 'BMS Tech', 'Tailwind CSS'],
+    description: 'A premium corporate and technical website for Tesson Energy, showcasing intelligent lithium-ion battery architectures, EV platform prismatic modules, utility-scale liquid-cooled ESS containers, and heavy industrial automation grids.',
+    shortDesc: 'Next-Gen Energy Solutions Portal',
+    details: 'Designed and developed a premium technical website for Tesson Energy. Features interactive product catalogs for EV battery modules, detailed energy storage systems (ESS) specifications, and an engineering quote/proposal request system.',
+    features: [
+      'Intelligent lithium-ion battery architectures & prismatic modules',
+      'Utility-scale liquid-cooled ESS containers',
+      'Custom battery solution proposal request system'
+    ],
+    client: 'Tesson Energy',
+    year: '2026',
+    link: 'https://tesson-battery-nu.vercel.app/',
+    metaLeft: 'React • Vite • BMS Tech',
+    actionText: 'View Live Website',
+    industry: 'Renewable Energy & Battery Tech',
+    timeline: '6 Weeks',
+    services: 'Web Development, UI/UX Design'
   }
 ];
 
