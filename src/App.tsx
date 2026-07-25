@@ -556,6 +556,33 @@ const projectsData: Project[] = [
     industry: 'Renewable Energy & Battery Tech',
     timeline: '6 Weeks',
     services: 'Web Development, UI/UX Design'
+  },
+  {
+    logo: '/images/logos/skillstarburgs_logo.png',
+    title: 'Skill Star Burgs',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'orange',
+    color: '#FF5500',
+    rgb: '255, 85, 0',
+    img: '/images/projects/skillstarburgs_thumbnail.png',
+    tags: ['React', 'Vite', 'Bebas Neue', 'FontAwesome', 'Vanilla CSS'],
+    description: 'A premium, high-octane dark-themed craft burger kitchen landing page for "Skill Star Burgs" featuring custom burger builders, online ordering flows, and fast delivery timers.',
+    shortDesc: 'Premium Craft Burger Kitchen Landing Page',
+    details: 'Designed and developed a premium high-energy burger restaurant website for Skill Star Burgs. Features a dark industrial-themed aesthetic, custom burger ingredients/smash options modal customizer, interactive menu sliders, and simulated order tracking pipelines.',
+    features: [
+      'Interactive double/triple smash burger option customizer modal',
+      'Responsive bottom mobile navigation and order panel hooks',
+      'Smooth scroll animations & dark industrial aesthetic'
+    ],
+    client: 'Skill Star Burgs',
+    year: '2026',
+    link: 'https://food-demo-vert.vercel.app/',
+    metaLeft: 'React • Vite • Bebas Neue',
+    actionText: 'View Live Website',
+    industry: 'Food & Beverage / Restaurant',
+    timeline: '4 Weeks',
+    services: 'Web Development, UI/UX Design'
   }
 ];
 
