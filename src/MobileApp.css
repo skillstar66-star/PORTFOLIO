@@ -211,6 +211,11 @@
     height: 55px !important;
   }
 
+  .mobile-hero-header .brand-logo-text {
+    font-size: 1.25rem;
+    letter-spacing: 1.8px;
+  }
+
   .mobile-hero-badge {
     align-self: flex-start;
     background: rgba(168, 85, 247, 0.08) !important;
@@ -393,9 +398,30 @@
     border-radius: 3px;
   }
 
-  /* Mobile Brain Visual */
+  /* Mobile Hero Visual */
   .mobile-hero-visual {
-    display: none !important;
+    display: block !important;
+    width: 100%;
+    margin: 16px 0 32px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    box-shadow: 0 12px 32px rgba(168, 85, 247, 0.15);
+    background: #08060d;
+  }
+
+  .mobile-hero-image-wrapper {
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .mobile-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
   }
 
   @keyframes floatMobile {

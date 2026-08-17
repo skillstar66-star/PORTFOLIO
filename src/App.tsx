@@ -560,7 +560,7 @@ const projectsData: Project[] = [
   {
     logo: '/images/logos/skillstarburgs_logo.png',
     title: 'Skill Star Burgs',
-    category: 'Websites',
+    category: 'Web Apps',
     badge: '★ FEATURED',
     theme: 'orange',
     color: '#FF5500',
@@ -582,6 +582,141 @@ const projectsData: Project[] = [
     actionText: 'View Live Website',
     industry: 'Food & Beverage / Restaurant',
     timeline: '4 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    logo: '/images/logos/neaches_logo.png',
+    title: 'Neaches Academy',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'blue',
+    color: '#0f6fff',
+    rgb: '15, 111, 255',
+    img: '/images/projects/neaches_thumbnail.png',
+    tags: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Lucide Icons'],
+    description: 'A premium, high-converting competitive exam coaching academy website for NEET, JEE, and IAS preparation, featuring adaptive performance analytics, IIT/AIIMS faculty profiles, course catalogs, and interactive parent portals.',
+    shortDesc: 'NEET, JEE & Civil Services Coaching Portal',
+    details: 'Designed and developed an elite educational brand portal for Neaches Academy. Features a clean academic dashboard theme, course search filters, parent/student portals, mock test score trajectory visualization curves, and scholarship registration flows.',
+    features: [
+      'Mock test scoring progression curve visualization',
+      'Interactive course search and category tabs',
+      'Adaptive study planner & student portal dashboards'
+    ],
+    client: 'Neaches Academy',
+    year: '2026',
+    link: 'https://food-demo2.vercel.app/',
+    metaLeft: 'React • Next.js • Tailwind CSS',
+    actionText: 'View Live Website',
+    industry: 'Education & EdTech',
+    timeline: '8 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    logo: '/images/logos/govern_logo.png',
+    title: 'Govern Coaching Center',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'blue',
+    color: '#0f6fff',
+    rgb: '15, 111, 255',
+    img: '/images/projects/govern_thumbnail.png',
+    tags: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Lucide Icons'],
+    description: 'A premium, high-converting competitive exam coaching academy website for NEET, JEE, and IAS preparation, featuring adaptive performance analytics, IIT/AIIMS faculty profiles, course catalogs, and interactive parent portals.',
+    shortDesc: 'NEET, JEE & Civil Services Coaching Portal',
+    details: 'Designed and developed an elite educational brand portal for Govern Coaching Center (Neaches Academy). Features a clean academic dashboard theme, course search filters, parent/student portals, mock test score trajectory visualization curves, and scholarship registration flows.',
+    features: [
+      'Mock test scoring progression curve visualization',
+      'Interactive course search and category tabs',
+      'Adaptive study planner & student portal dashboards'
+    ],
+    client: 'Govern Coaching Center',
+    year: '2026',
+    link: 'https://govern-coaching-center.vercel.app/',
+    metaLeft: 'React • Next.js • Tailwind CSS',
+    actionText: 'View Live Website',
+    industry: 'Education & EdTech',
+    timeline: '8 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    logo: '/images/logos/prozone_logo.png',
+    title: 'Prozone Mall & Real Estate',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'gold',
+    color: '#caa16a',
+    rgb: '202, 161, 106',
+    img: '/images/projects/prozone_thumbnail.png',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Lucide Icons', 'Responsive Design'],
+    description: 'A premium, responsive shopping mall and commercial real estate portal featuring interactive 140+ brand directories, space leasing pipelines, event booking, and dark/light themes.',
+    shortDesc: 'Luxury Shopping Mall & Real Estate Portal',
+    details: 'Designed and engineered an elite commercial real estate and shopping mall web platform for Prozone Mall. Features a 140+ store directory search with category filters, retail leasing inquiry workflows, video hero backgrounds with dark/light themes, event space reservations, and interactive location navigation.',
+    features: [
+      'Interactive 140+ retail brand directory & instant search',
+      'Retail space leasing & VIP concierge booking pipeline',
+      'Dual dark & light luxury aesthetic with video hero showcase'
+    ],
+    client: 'Prozone Real Estate & Mall',
+    year: '2026',
+    link: 'https://pro-zone-pied.vercel.app/',
+    metaLeft: 'React • Vite • Retail & Mall',
+    actionText: 'View Live Website',
+    industry: 'Commercial Real Estate & Retail',
+    timeline: '6 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    logo: '/images/logos/annapoorna_logo.png',
+    title: 'Sree Annapoorna',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'blue',
+    color: '#28439a',
+    rgb: '40, 67, 154',
+    img: '/images/projects/annapoorna_thumbnail.png',
+    tags: ['React', 'Vite', 'GSAP', 'Tailwind CSS', 'Interactive Canvas'],
+    description: 'A heritage culinary brand experience for Coimbatore’s iconic Sree Annapoorna, featuring 3D frame scroll animations, traditional sweet catalogs, filter coffee brewing showcases, and branch location guides.',
+    shortDesc: 'Iconic South Indian Heritage Restaurant & Sweets',
+    details: 'Designed and engineered a high-fidelity digital brand experience for Sree Annapoorna. Integrates smooth GSAP scroll-triggered frame transitions, interactive authentic sweets & savouries showcase galleries, traditional filter coffee brewing modules, and interactive flagship branch locator maps.',
+    features: [
+      'Interactive GSAP frame-by-frame scroll animations',
+      'Authentic South Indian sweets, savouries & coffee catalogs',
+      'Multi-location flagship branch directory & hours guide'
+    ],
+    client: 'Sree Annapoorna Foods',
+    year: '2026',
+    link: 'https://annaporna.vercel.app',
+    metaLeft: 'React • GSAP • Heritage Dining',
+    actionText: 'View Live Website',
+    industry: 'Hospitality & Fine Dining',
+    timeline: '6 Weeks',
+    services: 'Web Development, UI/UX Design'
+  },
+  {
+    logo: '/images/logos/a1chips_logo.png',
+    title: 'A1 Chips',
+    category: 'Websites',
+    badge: '★ FEATURED',
+    theme: 'red',
+    color: '#e11d48',
+    rgb: '225, 29, 72',
+    img: '/images/projects/a1chips_thumbnail.png',
+    tags: ['React', 'Vite', 'Three.js', 'Tailwind CSS', 'Lucide Icons'],
+    description: 'A high-conversion 3D interactive e-commerce and brand portal for India\'s iconic A1 Chips, featuring 3D product viewports, coconut oil aroma storytelling, spice meters, and 20+ store locator maps.',
+    shortDesc: 'Iconic Gourmet Chips & Savouries E-Commerce',
+    details: 'Designed and engineered an elite gourmet snack e-commerce and brand showcase for A1 Chips (House of Savouries). Integrates immersive 3D chip viewports, flavor sliders for Masala Munch, Cream & Onion, and Aloo Tandoori, coconut oil batch purity storytelling, dynamic cart systems, and interactive multi-store location finders across Coimbatore.',
+    features: [
+      'Interactive 3D product showcase & flavor customization',
+      'Coconut oil purity storytelling & spice level indicators',
+      'Multi-store location locator with live maps & directions'
+    ],
+    client: 'A1 Chips & Savouries',
+    year: '2026',
+    link: 'https://a1-chips.vercel.app/',
+    metaLeft: 'React • Three.js • E-Commerce',
+    actionText: 'View Live Website',
+    industry: 'Gourmet Snacks & E-Commerce',
+    timeline: '6 Weeks',
     services: 'Web Development, UI/UX Design'
   }
 ];
@@ -658,7 +793,7 @@ const testimonialsData: Testimonial[] = [
   {
     name: 'RK Saree Hub',
     role: 'Founder, Rokea',
-    text: 'SkillStar Digital Solutions tripled our D2C e-commerce revenue in under 5 months through high-performance Meta/Google Ads and conversion rate optimization.',
+    text: 'RAHAN P R tripled our D2C e-commerce revenue in under 5 months through high-performance Meta/Google Ads and conversion rate optimization.',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80',
     company: 'Rokea'
   },
@@ -997,187 +1132,6 @@ const renderProjectScreen = (project: Project, isMobile: boolean) => {
   );
 };
 
-interface TeamMember {
-  name: string;
-  role: string;
-  bio: string;
-  img: string;
-  accent: string;
-  isFounder?: boolean;
-  experience: string;
-  icon?: React.ReactNode;
-  socials: { type: string; url: string; }[];
-  skills: string[];
-  timeline: { year: string; title: string; desc: string; }[];
-  achievements: string[];
-}
-
-const teamMembers: TeamMember[] = [
-  {
-    name: 'Anto Sheeba',
-    role: 'Administration Head',
-    bio: 'Supervising operations, workflows and corporate timelines.',
-    img: '/images/team/sheeba.png',
-    accent: 'purple',
-    experience: '5 Years',
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-        <line x1="16" y1="2" x2="16" y2="6"></line>
-        <line x1="8" y1="2" x2="8" y2="6"></line>
-        <line x1="3" y1="10" x2="21" y2="10"></line>
-      </svg>
-    ),
-    socials: [
-      { type: 'instagram', url: '#' },
-      { type: 'twitter', url: '#' },
-      { type: 'email', url: 'mailto:sheeba@skillstar.com' }
-    ],
-    skills: ['Operations Management', 'Workflow Optimization', 'Team Coordination', 'HR Management', 'Client Communication'],
-    timeline: [
-      { year: '2021', title: 'Joined SkillStar', desc: 'Took charge of administrative operations and team coordination.' },
-      { year: '2022', title: 'Process Optimization', desc: 'Streamlined internal workflows, improving delivery efficiency by 40%.' },
-      { year: '2024', title: 'Administration Head', desc: 'Elevated to lead all operational and administrative functions.' }
-    ],
-    achievements: ['40% Efficiency Improvement', 'Zero Deadline Misses', 'Team Satisfaction Score 98%']
-  },
-  {
-    name: 'Saravanan',
-    role: 'Senior Video Editor',
-    bio: 'Designing high-converting marketing collaterals and visual assets.',
-    img: '/images/team/saro.png',
-    accent: 'purple',
-    experience: '6 Years',
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 9 20 8 18 8C16 8 16 6 16 5C16 3 14 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-        <circle cx="7.5" cy="10.5" r="1.5"></circle>
-        <circle cx="11.5" cy="7.5" r="1.5"></circle>
-        <circle cx="16.5" cy="11.5" r="1.5"></circle>
-      </svg>
-    ),
-    socials: [
-      { type: 'instagram', url: '#' },
-      { type: 'behance', url: '#' },
-      { type: 'email', url: 'mailto:saravanan@skillstar.com' }
-    ],
-    skills: ['Video Editing', 'Motion Graphics', 'Color Grading', 'After Effects', 'Premiere Pro', 'DaVinci Resolve'],
-    timeline: [
-      { year: '2019', title: 'Started Video Editing', desc: 'Began professional video editing for brand campaigns and advertisements.' },
-      { year: '2021', title: 'Joined SkillStar', desc: 'Brought expertise in cinematic editing and visual storytelling.' },
-      { year: '2023', title: 'Senior Video Editor', desc: 'Promoted to lead all video production and post-production workflows.' }
-    ],
-    achievements: ['500+ Videos Produced', 'Viral Campaign with 2M+ Views', 'Brand Film Awards Finalist']
-  },
-  {
-    name: 'Dhanusha',
-    role: 'UI/UX Designer',
-    bio: 'Engineering wireframe aesthetics and seamless user journeys.',
-    img: '/images/team/dhanusha.png',
-    accent: 'purple',
-    experience: '4 Years',
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20h9"></path>
-        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-      </svg>
-    ),
-    socials: [
-      { type: 'instagram', url: '#' },
-      { type: 'behance', url: '#' },
-      { type: 'email', url: 'mailto:dhanusha@skillstar.com' }
-    ],
-    skills: ['UI Design', 'UX Research', 'Figma', 'Prototyping', 'Design Systems', 'User Testing'],
-    timeline: [
-      { year: '2022', title: 'Joined SkillStar', desc: 'Started designing user interfaces for web and mobile platforms.' },
-      { year: '2023', title: 'Design System Lead', desc: 'Built a scalable design system adopted across all client projects.' },
-      { year: '2024', title: 'UX Excellence', desc: 'Achieved 95%+ user satisfaction scores on usability testing.' }
-    ],
-    achievements: ['30+ App Designs', 'Design System Architect', '95% Usability Score']
-  },
-  {
-    name: 'Harini',
-    role: 'SEO & App Developer',
-    bio: 'Optimizing technical health models and building hybrid mobile interfaces.',
-    img: '/images/team/harini.png',
-    accent: 'purple',
-    experience: '3 Years',
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="4" y1="9" x2="20" y2="9"></line>
-        <line x1="4" y1="15" x2="20" y2="15"></line>
-        <line x1="10" y1="3" x2="8" y2="21"></line>
-        <line x1="16" y1="3" x2="14" y2="21"></line>
-      </svg>
-    ),
-    socials: [
-      { type: 'instagram', url: '#' },
-      { type: 'github', url: '#' },
-      { type: 'email', url: 'mailto:harini@skillstar.com' }
-    ],
-    skills: ['SEO Strategy', 'Technical SEO', 'React Native', 'Flutter', 'Google Analytics', 'App Store Optimization'],
-    timeline: [
-      { year: '2023', title: 'Joined SkillStar', desc: 'Started optimizing client websites for search engine performance.' },
-      { year: '2024', title: 'Mobile App Developer', desc: 'Expanded into hybrid mobile app development using React Native.' },
-      { year: '2025', title: 'SEO Specialist', desc: 'Drove organic traffic growth of 300% for multiple client portfolios.' }
-    ],
-    achievements: ['300% Organic Growth', '15+ Apps Published', 'Page 1 Rankings for 100+ Keywords']
-  },
-  {
-    name: 'Dinesh',
-    role: 'Full Stack Developer',
-    bio: 'Writing clean backend API integrations and responsive frontends.',
-    img: '/images/team/dinesh.jpeg',
-    accent: 'purple',
-    experience: '4 Years',
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6"></polyline>
-        <polyline points="8 6 2 12 8 18"></polyline>
-      </svg>
-    ),
-    socials: [
-      { type: 'instagram', url: '#' },
-      { type: 'github', url: '#' },
-      { type: 'email', url: 'mailto:dinesh@skillstar.com' }
-    ],
-    skills: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'REST APIs', 'Cloud Deployment'],
-    timeline: [
-      { year: '2022', title: 'Joined SkillStar', desc: 'Started building scalable web applications and API integrations.' },
-      { year: '2023', title: 'Lead Developer', desc: 'Led development of enterprise-grade applications for key clients.' },
-      { year: '2024', title: 'Architecture Expert', desc: 'Designed microservices architecture handling 1M+ daily requests.' }
-    ],
-    achievements: ['50+ Web Apps Built', '99.9% Uptime Record', 'Clean Code Champion']
-  },
-  {
-    name: 'Ram',
-    role: 'Full Stack Developer',
-    bio: 'Developing data layer queries and serverless database workflows.',
-    img: '/images/team/Ram.png',
-    accent: 'purple',
-    experience: '5 Years',
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
-      </svg>
-    ),
-    socials: [
-      { type: 'instagram', url: '#' },
-      { type: 'github', url: '#' },
-      { type: 'email', url: 'mailto:ram@skillstar.com' }
-    ],
-    skills: ['React', 'Next.js', 'Firebase', 'PostgreSQL', 'Python', 'Serverless Architecture'],
-    timeline: [
-      { year: '2021', title: 'Started Professional Development', desc: 'Began building full-stack solutions for startups and SMBs.' },
-      { year: '2023', title: 'Joined SkillStar', desc: 'Brought expertise in database architecture and serverless workflows.' },
-      { year: '2025', title: 'Solutions Architect', desc: 'Designing end-to-end technical solutions for enterprise clients.' }
-    ],
-    achievements: ['40+ Projects Delivered', 'Serverless Migration Expert', 'Open Source Contributor']
-  }
-];
-
 function App() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -1208,7 +1162,7 @@ function App() {
   const [expandedAbout, setExpandedAbout] = useState<number[]>([]);
   const [expandedFooter, setExpandedFooter] = useState<string[]>([]);
   const [activeHeroStatIdx, setActiveHeroStatIdx] = useState<number>(0);
-  const [selectedTeamMember, setSelectedTeamMember] = useState<any>(null);
+
 
   const filteredProjects = (selectedCategory === 'All' || selectedCategory === 'All Projects')
     ? projectsData
@@ -1439,8 +1393,8 @@ function App() {
     <div className="app-container">
       <header className="navbar desktop-only">
         <div className="container nav-content">
-          <div className="logo">
-            <img src="/images/projects/logo (2).png" alt="SkillStar Logo" className="logo-image" />
+          <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
+            <span className="brand-logo-text">RAHAN P R</span>
           </div>
           <nav className="nav-links">
             <a href="#" className="active" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>HOME</a>
@@ -1599,8 +1553,8 @@ function App() {
       {/* Mobile-Only Hero Section */}
       <section className="mobile-hero mobile-only container">
         <div className="mobile-hero-header">
-          <div className="logo">
-            <img src="/images/projects/logo (2).png" alt="SkillStar Logo" className="logo-image" />
+          <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
+            <span className="brand-logo-text">RAHAN P R</span>
           </div>
           <button className="btn-outline" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }} onClick={() => setShowLeadPopup(true)}>
             Contact
@@ -1708,8 +1662,8 @@ function App() {
         </div>
 
         <div className="mobile-hero-visual">
-          <div className="mobile-brain-container">
-            <img src="/brain.png" alt="Glowing Brain" className="mobile-brain-image" />
+          <div className="mobile-hero-image-wrapper">
+            <img src="/images/RAHAN P R.png" alt="RAHAN P R Hero Showcase" className="mobile-hero-image" />
           </div>
         </div>
       </section>
@@ -2263,7 +2217,7 @@ function App() {
                 Mission</span> Statement
               </h2>
               <p className="about-desc">
-                SkillStar Digital Solutions is an AI-powered digital growth company. We don't just market businesses; we engineer complete digital ecosystems.
+                RAHAN P R is an AI-powered digital growth company. We don't just market businesses; we engineer complete digital ecosystems.
               </p>
 
               <div className="mission-vision-grid">
@@ -2485,7 +2439,7 @@ function App() {
               <div className="timeline-step-dot"></div>
               <span className="timeline-step-year">2023</span>
               <span className="timeline-step-title">Company Founded</span>
-              <span className="timeline-step-desc">Launched SkillStar as a remote design agency.</span>
+              <span className="timeline-step-desc">Launched RAHAN P R as a remote design agency.</span>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot"></div>
@@ -2681,170 +2635,7 @@ function App() {
         </div>
       </section>
 
-      <section className="team-section container" id="team">
-        <div className="team-header">
-          <span className="team-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px' }}>
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-            OUR TEAM
-          </span>
-          <h2 className="team-headline">
-            The <span className="text-gradient-purple">Minds</span> Behind Every <span className="text-gradient-orange">Success</span>
-          </h2>
-          <p className="team-subtitle">
-            A passionate team of creative thinkers, designers, developers and strategists dedicated to turning your ideas into digital reality.
-          </p>
-        </div>
 
-
-
-        <div className="team-grid">
-          {teamMembers.map((member, idx) => (
-            <div className={`team-card ${member.accent}-accent ${member.isFounder ? 'founder-card' : ''}`} key={idx}>
-              <div className="team-image-container">
-                <div className="card-top-action">
-                  {member.isFounder ? (
-                    <span className="founder-badge">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" style={{ marginRight: '4px' }}>
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                      </svg>
-                      FOUNDER
-                    </span>
-                  ) : (
-                    <span className="card-badge-icon">
-                      {member.icon}
-                    </span>
-                  )}
-                </div>
-                
-                <img src={member.img} alt={member.name} className="team-image" />
-                
-                <div className="team-social-overlay">
-                  {member.socials.map((social, sIdx) => (
-                    <a href={social.url} className={`social-btn-overlay ${social.type}`} key={sIdx} aria-label={social.type}>
-                      {social.type === 'linkedin' && (
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                          <rect x="2" y="9" width="4" height="12"></rect>
-                          <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                      )}
-                      {social.type === 'github' && (
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                      )}
-                      {social.type === 'twitter' && (
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                        </svg>
-                      )}
-                      {social.type === 'instagram' && (
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                      )}
-                      {social.type === 'email' && (
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                          <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                      )}
-                      {social.type === 'website' && (
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <line x1="2" y1="12" x2="22" y2="12"></line>
-                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                      )}
-                      {social.type === 'behance' && (
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M9 10h1.5a1.5 1.5 0 0 0 0-3H9v3zm0 5h2a1.5 1.5 0 0 0 0-3H9v3z"></path>
-                          <path d="M5 20h7a5 5 0 0 0 5-5v-1a5 5 0 0 0-5-5H5v11zM18 9h4"></path>
-                        </svg>
-                      )}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              <div className="team-details-container">
-                <h3>{member.name}</h3>
-                <p className="team-specialty">{member.role}</p>
-                <div className="team-experience-row">
-                  <span className="experience-label">Experience:</span>
-                  <span className="experience-value"> {member.experience}</span>
-                </div>
-                <button className="team-book-btn" onClick={() => setSelectedTeamMember(member)}>
-                  CHECK {member.name.split(' ')[0].toUpperCase()}
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Team Stats Bar */}
-        <div className="team-stats-bar">
-          <div className="stats-item">
-            <div className="stats-icon-wrapper">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
-            </div>
-            <div className="stats-content">
-              <h4>100+</h4>
-              <p>Projects Completed</p>
-            </div>
-          </div>
-          <div className="stats-item">
-            <div className="stats-icon-wrapper">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div className="stats-content">
-              <h4>50+</h4>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-          <div className="stats-item">
-            <div className="stats-icon-wrapper">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-            </div>
-            <div className="stats-content">
-              <h4>5.0</h4>
-              <p>Average Rating</p>
-            </div>
-          </div>
-          <div className="stats-item">
-            <div className="stats-icon-wrapper">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                <path d="M4 22h16"></path>
-                <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path>
-                <path d="M12 2a6 6 0 0 1 6 6v4H6V8a6 6 0 0 1 6-6z"></path>
-              </svg>
-            </div>
-            <div className="stats-content">
-              <h4>3+</h4>
-              <p>Years Experience</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <div className="desktop-only">
         <section className="testimonials-section container">
@@ -2912,8 +2703,8 @@ function App() {
 
             <div className="footer-links-grid">
               <div className="footer-col brand-col">
-                <div className="logo">
-                  <img src="/images/projects/logo (2).png" alt="SkillStar Logo" className="logo-image" />
+                <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
+                  <span className="brand-logo-text">RAHAN P R</span>
                 </div>
                 <p>Transforming Businesses Into Market Leaders with AI-powered digital growth ecosystems.</p>
               </div>
@@ -2944,7 +2735,7 @@ function App() {
                 <ul className="contact-info-list">
                   <li><span className="icon">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </span> <a href="mailto:skillstardigitalsolutions@gmail.com">skillstardigitalsolutions@gmail.com</a></li>
+                    </span> <a href="mailto:rahanpr10@gmail.com">rahanpr10@gmail.com</a></li>
                   <li><span className="icon">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.4a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     </span> <a href="tel:+918925845871">+91 89258 45871</a></li>
@@ -2958,7 +2749,7 @@ function App() {
 
           <div className="footer-bottom">
             <div className="container bottom-flex">
-              <p>&copy; 2026 SkillStar Digital Solutions. All rights reserved.</p>
+              <p>&copy; 2026 RAHAN P R. All rights reserved.</p>
               <div className="legal-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
@@ -3095,7 +2886,7 @@ function App() {
           <a href="tel:+918925845871" className="mobile-contact-btn mobile-contact-btn-call">
             Call Our Growth Expert
           </a>
-          <a href="mailto:skillstardigitalsolutions@gmail.com" className="mobile-contact-btn mobile-contact-btn-email">
+          <a href="mailto:rahanpr10@gmail.com" className="mobile-contact-btn mobile-contact-btn-email">
             Send an Email
           </a>
           <button className="mobile-contact-btn mobile-contact-btn-meeting" onClick={() => setShowLeadPopup(true)}>
@@ -3108,8 +2899,8 @@ function App() {
       <footer className="mobile-footer mobile-only">
         <div className="container">
           <div className="mobile-footer-logo-area">
-            <div className="logo">
-              <img src="/images/projects/logo (2).png" alt="SkillStar Logo" className="logo-image" />
+            <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
+              <span className="brand-logo-text">RAHAN P R</span>
             </div>
             <p>Transforming Businesses Into Market Leaders with AI-powered digital growth ecosystems.</p>
           </div>
@@ -3151,7 +2942,7 @@ function App() {
                 <div className="mobile-footer-contact-list">
                   <div className="mobile-footer-contact-item">
                     <span className="icon">✉</span>
-                    <a href="mailto:skillstardigitalsolutions@gmail.com">skillstardigitalsolutions@gmail.com</a>
+                    <a href="mailto:rahanpr10@gmail.com">rahanpr10@gmail.com</a>
                   </div>
                   <div className="mobile-footer-contact-item">
                     <span className="icon">☎</span>
@@ -3167,7 +2958,7 @@ function App() {
           </div>
 
           <div className="mobile-footer-bottom">
-            <p>&copy; 2026 SkillStar Digital Solutions. All rights reserved.</p>
+            <p>&copy; 2026 RAHAN P R. All rights reserved.</p>
             <div className="mobile-footer-legal">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
@@ -3175,133 +2966,6 @@ function App() {
           </div>
         </div>
       </footer>
-
-      {/* Career Experience Modal */}
-      {selectedTeamMember && (
-        <div className="career-modal-overlay" onClick={() => setSelectedTeamMember(null)}>
-          <div className="career-modal" onClick={(e) => e.stopPropagation()}>
-            {/* Close Button */}
-            <button className="career-modal-close" onClick={() => setSelectedTeamMember(null)}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-
-            {/* Modal Header */}
-            <div className="career-modal-header">
-              <div className="career-modal-avatar-wrapper">
-                <div className="career-modal-avatar-ring"></div>
-                <img src={selectedTeamMember.img} alt={selectedTeamMember.name} className="career-modal-avatar" />
-                {selectedTeamMember.isFounder && (
-                  <span className="career-modal-founder-badge">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2">
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                    </svg>
-                    FOUNDER
-                  </span>
-                )}
-              </div>
-              <div className="career-modal-header-info">
-                <h2 className="career-modal-name">{selectedTeamMember.name}</h2>
-                <p className="career-modal-role">{selectedTeamMember.role}</p>
-                <div className="career-modal-exp-badge">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                  </svg>
-                  {selectedTeamMember.experience} Experience
-                </div>
-              </div>
-            </div>
-
-            {/* Bio */}
-            <div className="career-modal-bio">
-              <p>{selectedTeamMember.bio}</p>
-            </div>
-
-            {/* Skills */}
-            <div className="career-modal-section">
-              <h3 className="career-modal-section-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-                Core Skills
-              </h3>
-              <div className="career-modal-skills">
-                {selectedTeamMember.skills?.map((skill: string, sIdx: number) => (
-                  <span className="career-skill-tag" key={sIdx} style={{ animationDelay: `${sIdx * 0.08}s` }}>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Career Timeline */}
-            <div className="career-modal-section">
-              <h3 className="career-modal-section-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                Career Journey
-              </h3>
-              <div className="career-timeline">
-                {selectedTeamMember.timeline?.map((item: any, tIdx: number) => (
-                  <div className="career-timeline-item" key={tIdx} style={{ animationDelay: `${tIdx * 0.15}s` }}>
-                    <div className="career-timeline-dot"></div>
-                    <div className="career-timeline-connector"></div>
-                    <div className="career-timeline-content">
-                      <span className="career-timeline-year">{item.year}</span>
-                      <h4 className="career-timeline-title">{item.title}</h4>
-                      <p className="career-timeline-desc">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Achievements */}
-            <div className="career-modal-section">
-              <h3 className="career-modal-section-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="8" r="7"></circle>
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                </svg>
-                Key Achievements
-              </h3>
-              <div className="career-achievements-grid">
-                {selectedTeamMember.achievements?.map((ach: string, aIdx: number) => (
-                  <div className="career-achievement-card" key={aIdx} style={{ animationDelay: `${aIdx * 0.1}s` }}>
-                    <div className="career-achievement-icon">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                      </svg>
-                    </div>
-                    <span>{ach}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="career-modal-cta">
-              <a
-                href={`https://wa.me/918925845871?text=Hi! I'd like to connect with ${selectedTeamMember.name} regarding a project.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="career-modal-cta-btn"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-                </svg>
-                Connect via WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Mobile-Only Lead Capture Bottom Sheet Drawer */}
       <div 

@@ -50,6 +50,24 @@
   gap: 10px;
 }
 
+.brand-logo-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo:hover .brand-logo-text {
+  color: #ffffff;
+  text-shadow: 0 0 16px rgba(147, 98, 247, 0.6);
+}
+
 .logo-image {
   height: 70px;
   width: auto;
@@ -142,9 +160,9 @@
   align-items: center;
   justify-content: flex-start;
   padding: 7rem 4rem 2rem 5rem;
-  background-image: linear-gradient(to right, rgba(8, 6, 13, 0.95) 0%, rgba(8, 6, 13, 0.5) 45%, transparent 90%), url('/images/projects/hero%20bg.png');
+  background-image: linear-gradient(to right, rgba(8, 6, 13, 0.96) 0%, rgba(8, 6, 13, 0.65) 45%, rgba(8, 6, 13, 0.25) 75%, transparent 100%), url('/images/RAHAN%20P%20R.png');
   background-size: cover;
-  background-position: 75% center;
+  background-position: right center;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
